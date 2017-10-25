@@ -5,10 +5,16 @@ import configureStore from './store/store';
 import { signup, login, logout } from './util/session_api_util.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById('root');
-  const store = configureStore();
-  window.login = login;
-  window.signup = signup;
+  let store;
   window.logout = logout;
+  if(window.currentUser){
+    const preloadedState = { session: { currentUser: window.currentUser }};
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+  const root = document.getElementById('root');
+  window.store = store;
   ReactDOM.render(<Root store={store}/>, root );
 });
