@@ -8,7 +8,7 @@ class SessionForm extends React.Component {
       username: '',
       password: ''
     };
-  
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -54,7 +54,6 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h1>Welcome back to Trellow!</h1>
           <h1>Login to Trellow</h1>
           <br/>
           Please {this.props.formType} or {this.navLink()}
