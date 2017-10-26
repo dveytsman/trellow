@@ -2,8 +2,16 @@
   background-color: #026aa7;
   color: white;
   text-align: center;
+  padding-top: 50px;
+  height: 100%;
+  height:100vh
 }
 
-.login{
-  background-color: white;
+#login-signup{
+  background-color: #0079bf;
+  height: 80px;
+
+}
+.landing-bar{
+  display: flex;
 }

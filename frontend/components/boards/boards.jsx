@@ -17,7 +17,7 @@ handleLogout(e){
     if(this.props.loggedIn){
       return(
         <div>
-          <h1>logged</h1>
+          <h1>logged {this.props.currentUser.username}</h1>
           <button onClick={this.handleLogout.bind(this)}>Log out</button>
         </div>
       );
