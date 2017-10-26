@@ -4,14 +4,87 @@
   text-align: center;
   padding-top: 50px;
   height: 100%;
-  height:100vh
+  height:100vh;
+  font-family: Arial;
+  font-size: 20px;
 }
 
-#login-signup{
+.landing input{
+  height: 35px;
+  width: 440px;
+  font-size: 20px;
+  color: #666;
+  border-radius: 4px;
+
+}
+.landing{
+
   background-color: #0079bf;
-  height: 80px;
+}
+.landing-image{
+  margin-left: 25px;
+  width: 140px;
+  background-image: url('LandingLogo.png');
+  background-size: contain;
+}
+#login-signup{
+  margin-top: 20px;
+  height:40px;
 
 }
+body { margin:0; }
 .landing-bar{
+  padding-top: 10px;
+  margin-bottom: 10px;
   display: flex;
+  justify-content: space-between;
+}
+.login-button{
+  border-radius: .4em;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+  background-color: #016aa7;
+  color: white;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  padding-left: 20.8px;
+  padding-right: 20.8px;
+  z-index: 3;
+  text-decoration: none;
+}
+.landing-main-button{
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: .4em;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+    background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  color: white !important;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  padding-left: 20.8px;
+  padding-right: 20.8px;
+  height: 50px !important;
+  width: 235px !important;
+  box-sizing: border-box;
+}
+.signup-button{
+  font-weight: 900;
+  border-radius: .4em;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+    background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  color: white;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  padding-left: 20.8px;
+  padding-right: 20.8px;
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+.landing-password{
+  margin-left: -350px !important;
+  margin-bottom: 5px !important;
+}
+.landing-username{
+  margin-left: -350px !important;
+  margin-bottom: 5px;
 }

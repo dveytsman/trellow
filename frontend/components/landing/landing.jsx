@@ -62,20 +62,23 @@ class Landing extends React.Component{
             <div className="landing-login-form">
               {this.renderErrors()}
               <br/>
-              <label>Username
+              <label className="landing-username">Username
                 <br/>
-                <input type='text' value={this.state.username}
-                  onChange={this.update('username')} className="landing-login-input"/>
+                <input className="landing-input" type='text' value={this.state.username}
+                  onChange={this.update('username')} className="landing-login-input"
+                  placeholder='e.g., LukeSkywalker'/>
                 <br/>
               </label>
               <br/>
-              <label>Password
+              <label className="landing-password">Password
                 <br/>
-                <input type="password" value={this.state.password}
-                  onChange={this.update('password')} className="landing-login-input"/>
+                <input className="landing-input" type="password" value={this.state.password}
+                  onChange={this.update('password')} className="landing-login-input"
+                  placeholder='e.g., ••••••'/>
               </label>
               <br/>
-              <input type="submit" value="Login" />
+              <br/>
+              <input className="landing-main-button" type="submit" value="Login" />
             </div>
           </form>
         </div>
