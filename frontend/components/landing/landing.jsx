@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+import GreetingContainer from '../greeting/greeting_container'
 class Landing extends React.Component{
   constructor(props){
     super(props);
@@ -52,6 +52,9 @@ class Landing extends React.Component{
     if(!this.props.loggedIn){
       return(
         <div className='landing'>
+          <header>
+            <GreetingContainer />
+          </header>
           <form onSubmit={this.handleLogin} className="landing-login">
             <h1>Welcome back to Trellow!</h1>
             <br/>
