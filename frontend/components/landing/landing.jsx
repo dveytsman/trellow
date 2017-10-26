@@ -57,6 +57,7 @@ class Landing extends React.Component{
             <br/>
             <h1>Log in to Trellow</h1>
             <div className="landing-login-form">
+              {this.renderErrors()}
               <br/>
               <label>Username
                 <br/>
