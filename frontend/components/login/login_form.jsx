@@ -12,7 +12,7 @@ class LoginForm extends React.Component{
   }
 
   componentWillReceiveProps(){
-    this.setState({username:'', password:''});
+    // this.setState({username:'', password:''});
   }
 
   update(field) {

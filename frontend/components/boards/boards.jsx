@@ -1,4 +1,5 @@
 import React from 'react';
+import NavbarContainer from '../navbar/navbar_container';
 
 class Boards extends React.Component{
   constructor(props){
@@ -17,6 +18,7 @@ handleLogout(e){
     if(this.props.loggedIn){
       return(
         <div>
+          <NavbarContainer/>
           <h1>logged {this.props.currentUser.username}</h1>
           <button onClick={this.handleLogout.bind(this)}>Log out</button>
         </div>

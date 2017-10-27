@@ -12,7 +12,7 @@ class Landing extends React.Component{
   }
 
   componentWillReceiveProps(){
-    this.setState({username:'', password:''});
+    // this.setState({username:'', password:''});
   }
 
   update(field) {
@@ -24,7 +24,7 @@ class Landing extends React.Component{
   handleLogin(e){
     e.preventDefault();
     const user = this.state;
-    this.props.login({user});
+    this.props.login({user}).then(this.setState({username: '', password: ''}));
   }
 
   navLink() {

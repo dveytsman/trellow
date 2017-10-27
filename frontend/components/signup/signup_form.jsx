@@ -12,7 +12,7 @@ class SignupForm extends React.Component{
   }
 
   componentWillReceiveProps(){
-    this.setState({username:'', password:''});
+    // this.setState({username:'', password:''});
   }
 
   update(field) {
@@ -37,9 +37,11 @@ class SignupForm extends React.Component{
 
 
   renderErrors() {
+
     return(
       <ul>
         {this.props.errors.map((error, i) => (
+
           <li key={`error-${i}`}>
             {error}
           </li>
@@ -65,7 +67,7 @@ class SignupForm extends React.Component{
               </div>
               <div>
                 <input name="username" className="login-input" type='text' value={this.state.username}
-                  onChange={this.update('username')}placeholder="e.g., hercule@poirot.belgium"/>
+                  onChange={this.update('username')}placeholder="e.g., captainpicard"/>
               </div>
               <div>
                 <label htmlFor="password" className="login-password-form">Password</label>

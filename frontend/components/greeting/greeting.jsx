@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const sessionLinks = () => (
-  <div class="landing-bar">
+  <div className="landing-bar">
     <div className="landing-image">
 
     </div>
