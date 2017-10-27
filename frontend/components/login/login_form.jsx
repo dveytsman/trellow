@@ -51,35 +51,44 @@ class LoginForm extends React.Component{
   render() {
     if(!this.props.loggedIn){
       return(
+        <div className="login-page">
+
         <div className='login'>
           <form onSubmit={this.handleLogin} className="login-form">
-            <div>
-              <h1>Log in to Trellow</h1>
-            </div>
-            <div className="login-form-errors">
-              {this.renderErrors()}
-            </div>
-            <div>
-              <label className="login-username-form">Username</label>
-            </div>
-            <div>
-              <input className="login-input" type='text' value={this.state.username}
-                onChange={this.update('username')}/>
-            </div>
-            <div>
-              <label className="login-password-form">Password</label>
-            </div>
-            <div>
-              <input className="login-input" type="password" value={this.state.password}
-                onChange={this.update('password')}/>
-            </div>
-            <div>
-              <input className="login-form-button" type="submit" value="Log In" />
+            <div className="login-h1">
+              <p className="heading">Log in to Trellow</p>
+              <div className="login-form-errors">
+                {this.renderErrors()}
+              </div>
+              <div>
+                <label htmlFor="username" className="login-username-form">Username</label>
+              </div>
+              <div>
+                <input name="username" className="login-input" type='text' value={this.state.username}
+                  onChange={this.update('username')}placeholder="e.g., hercule@poirot.belgium"/>
+              </div>
+              <div>
+                <label htmlFor="password" className="login-password-form">Password</label>
+              </div>
+              <div>
+                <input name="password" className="login-input" type="password" value={this.state.password}
+                  onChange={this.update('password')} placeholder="e.g., •••••••"/>
+              </div>
+              <div>
+                <input className="login-form-button" type="submit" value="Log In" />
+              </div>
             </div>
           </form>
+          <footer>
+            <div>
+              <p className="copyright">© Copyright 2017, Trellow, Inc. All rights reserved.</p>
+            </div>
+          </footer>
         </div>
+      </div>
       );
     }
+
     return null;
   }
 }

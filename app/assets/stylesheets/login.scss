@@ -1,42 +1,92 @@
-// .login{
-// margin: 0 auto;
-// text-align: center;
-// padding-top: 50px;
-// font-size: 20px;
-// display: block;
-// overflow: hidden;
-// }
-// .login h1{
-//   margin-left: -300px;
-// }
-// .login input{
-//   height: 35px;
-//   width: 440px;
-//   font-size: 20px;
-//   color: #666;
-//   border-radius: .4em;
-//   border: 1px solid black;
-// }
-// .login-username-form{
-//   margin-left: -500px;
-// }
-// .login-password-form{
-//   margin-left: -500px;
-// }
-// .login-input{
-//   margin-left: -460px;
-// }
-// .login-form-button{
-//   font-size: 20px;
-//   font-weight: 900;
-//   border-radius: .4em;
-//   box-shadow: 0 2px 0 rgba(0,0,0,0.3);
-//   background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
-//   color: white;
-//   margin-top: 10px;
-//   padding-top: 11.2px;
-//   padding-bottom: 11.2px;
-//   padding-left: 20.8px;
-//   padding-right: 20.8px;
-//   margin-left: -510px;
-// }
+.login{
+margin: 0 auto;
+
+text-align: center;
+padding-top: 100px;
+font-size: 20px;
+display: flex;
+overflow: hidden;
+flex-direction: column;
+width: auto;
+color: #4d4d4d;
+}
+.heading{
+  display: flex;
+  margin-bottom: 0;
+}
+.login-form{
+  display: flex;
+}
+.login-form-errors{
+    font-size: 15px;
+    list-style: none;
+    color: red;
+}
+.login-h1{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 2.5pc;
+  font-weight: 900;
+}
+
+.login-input{
+  height: 35px;
+  width: 440px;
+  font-size: 20px;
+  color: #666;
+  border-radius: .4em;
+  border: 1px solid #cdd2d4;
+  padding-left: 10px;
+  background-color: #edeff0;
+}
+.login-input:focus{
+  border-color: #a5acb0;
+  outline: none;
+  box-shadow: 0 0 6px #cdd2d4;
+}
+.login-username-form{
+  font-size: 1.3pc;
+  font-weight: 400;
+}
+.login-password-form{
+  font-size: 1.3pc;
+  font-weight: 400;
+  display: flex;
+  margin-top: 20px;
+}
+.login-page{
+  display: flex;
+  flex-direction: column;
+}
+.login-form-button{
+  display: flex;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: .4em;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  color: white !important;
+  margin-top: 40px;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  padding-left: 20.8px;
+  padding-right: 20.8px;
+  width: 100px;
+  height:auto;
+}
+.login-form-button:hover{
+  background: #56a340;
+
+}
+footer p{
+  display: flex;
+  color: #999;
+  font-size: 15px;
+}
+.login-form-button:active{
+  background: #4b8831;
+}
+.copyright{
+
+}
