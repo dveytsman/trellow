@@ -14,6 +14,9 @@ class Landing extends React.Component{
   componentWillReceiveProps(){
     // this.setState({username:'', password:''});
   }
+  componentWillUnmount(){
+    // this.props.errors.delete();
+  }
 
   update(field) {
     return e => this.setState({
