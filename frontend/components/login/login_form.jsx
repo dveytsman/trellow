@@ -52,31 +52,33 @@ class LoginForm extends React.Component{
     if(!this.props.loggedIn){
       return(
         <div className='login'>
-          <form onSubmit={this.handleLogin} className="login">
-            <br/>
-            <h1>Log in to Trellow</h1>
-            <div className="login-form">
+          <form onSubmit={this.handleLogin} className="login-form">
+            <div>
+              <h1>Log in to Trellow</h1>
+            </div>
+            <div className="login-form-errors">
               {this.renderErrors()}
-              <br/>
-              <label>Username
-                <br/>
-                <input type='text' value={this.state.username}
-                  onChange={this.update('username')} className="login-input"/>
-                <br/>
-              </label>
-              <br/>
-              <label>Password
-                <br/>
-                <input type="password" value={this.state.password}
-                  onChange={this.update('password')} className="login-input"/>
-              </label>
-              <br/>
-              <input type="submit" value="Login" />
+            </div>
+            <div>
+              <label className="login-username-form">Username</label>
+            </div>
+            <div>
+              <input className="login-input" type='text' value={this.state.username}
+                onChange={this.update('username')}/>
+            </div>
+            <div>
+              <label className="login-password-form">Password</label>
+            </div>
+            <div>
+              <input className="login-input" type="password" value={this.state.password}
+                onChange={this.update('password')}/>
+            </div>
+            <div>
+              <input className="login-form-button" type="submit" value="Log In" />
             </div>
           </form>
         </div>
       );
-
     }
     return null;
   }

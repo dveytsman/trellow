@@ -14,8 +14,8 @@
   width: 440px;
   font-size: 20px;
   color: #666;
-  border-radius: 4px;
-
+  border-radius: .4em;
+  border: 0;
 }
 .landing{
 
@@ -51,12 +51,18 @@ body { margin:0; }
   z-index: 3;
   text-decoration: none;
 }
+.login-button:hover{
+  background-color: #185b8f;
+}
+.login-button:active{
+  background-color: #144f7c;
+}
 .landing-main-button{
   font-weight: 700;
   font-size: 14px;
-  border-radius: .4em;
+  border-radius: 3em;
   box-shadow: 0 2px 0 rgba(0,0,0,0.3);
-    background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
   color: white !important;
   padding-top: 11.2px;
   padding-bottom: 11.2px;
@@ -66,11 +72,18 @@ body { margin:0; }
   width: 235px !important;
   box-sizing: border-box;
 }
+.landing-main-button:hover{
+  background: #56a340;
+  cursor: pointer;
+}
+.landing-main-button:active{
+  background: #4b8831;
+}
 .signup-button{
   font-weight: 900;
   border-radius: .4em;
   box-shadow: 0 2px 0 rgba(0,0,0,0.3);
-    background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
   color: white;
   padding-top: 11.2px;
   padding-bottom: 11.2px;
@@ -78,6 +91,12 @@ body { margin:0; }
   padding-right: 20.8px;
   text-decoration: none;
   margin-right: 25px;
+}
+.signup-button:hover{
+  background: #56a340;
+}
+.signup-button:active{
+  background: #4b8831;
 }
 
 .landing-password{
@@ -88,3 +107,4 @@ body { margin:0; }
   margin-left: -350px !important;
   margin-bottom: 5px;
 }
+input:focus {outline:0;}

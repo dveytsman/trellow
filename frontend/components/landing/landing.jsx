@@ -66,7 +66,7 @@ class Landing extends React.Component{
                 <br/>
                 <input className="landing-input" type='text' value={this.state.username}
                   onChange={this.update('username')} className="landing-login-input"
-                  placeholder='e.g., LukeSkywalker'/>
+                  placeholder='   e.g., LukeSkywalker'/>
                 <br/>
               </label>
               <br/>
@@ -74,11 +74,11 @@ class Landing extends React.Component{
                 <br/>
                 <input className="landing-input" type="password" value={this.state.password}
                   onChange={this.update('password')} className="landing-login-input"
-                  placeholder='e.g., ••••••'/>
+                  placeholder='   e.g., ••••••'/>
               </label>
               <br/>
               <br/>
-              <input className="landing-main-button" type="submit" value="Login" />
+              <input id="landing-button" className="landing-main-button" type="submit" value="Log In" />
             </div>
           </form>
         </div>
