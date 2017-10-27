@@ -24,7 +24,7 @@ class Landing extends React.Component{
   handleLogin(e){
     e.preventDefault();
     const user = this.state;
-    this.props.login({user}).then(this.setState({username: '', password: ''}));
+    this.props.login({user}).then(() => this.setState({username: '', password: ''}));
   }
 
   navLink() {
