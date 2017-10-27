@@ -1,0 +1,28 @@
+.signup-form-button{
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: .4em;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  color: white !important;
+  margin-top: 40px;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  padding-left: 20.8px;
+  padding-right: 20.8px;
+  width: auto;
+  height:auto;
+}
+.signup-form-button:hover{
+  background: #56a340;
+
+}
+footer p{
+  display: flex;
+  color: #999;
+  font-size: 15px;
+}
+.signup-form-button:active{
+  background: #4b8831;
+}

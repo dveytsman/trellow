@@ -51,36 +51,47 @@ class SignupForm extends React.Component{
   render() {
     if(!this.props.loggedIn){
       return(
-        <div className='sign-up'>
-          <form onSubmit={this.handleLogin} className="login">
-            <br/>
-            <h1>Create a Trellow Account</h1>
-            <div className="login-form">
-              {this.renderErrors()}
-              <br/>
-              <label>Username
-                <br/>
-                <input type='text' value={this.state.username}
-                  onChange={this.update('username')} className="login-input"/>
-                <br/>
-              </label>
-              <br/>
-              <label>Password
-                <br/>
-                <input type="password" value={this.state.password}
-                  onChange={this.update('password')} className="login-input"/>
-              </label>
-              <br/>
-              <input type="submit" value="Sign up!" />
+        <div className="login-page">
+
+        <div className='login'>
+          <form onSubmit={this.handleLogin} className="login-form">
+            <div className="login-h1">
+              <p className="heading">Create a Trellow Account</p>
+              <div className="login-form-errors">
+                {this.renderErrors()}
+              </div>
+              <div>
+                <label htmlFor="username" className="login-username-form">Username</label>
+              </div>
+              <div>
+                <input name="username" className="login-input" type='text' value={this.state.username}
+                  onChange={this.update('username')}placeholder="e.g., hercule@poirot.belgium"/>
+              </div>
+              <div>
+                <label htmlFor="password" className="login-password-form">Password</label>
+              </div>
+              <div>
+                <input name="password" className="login-input" type="password" value={this.state.password}
+                  onChange={this.update('password')} placeholder="e.g., •••••••"/>
+              </div>
+              <div>
+                <input className="signup-form-button" type="submit" value="Create New Account" />
+              </div>
             </div>
           </form>
+          <footer>
+            <div>
+              <p className="copyright">© Copyright 2017, Trellow, Inc. All rights reserved.</p>
+            </div>
+          </footer>
         </div>
+      </div>
       );
-
     }
+
     return null;
   }
-}
+  }
 
 
 export default SignupForm;
