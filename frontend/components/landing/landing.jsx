@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import GreetingContainer from '../greeting/greeting_container'
+import GreetingContainer from '../greeting/greeting_container';
+
 class Landing extends React.Component{
   constructor(props){
     super(props);
@@ -15,7 +16,7 @@ class Landing extends React.Component{
     // this.setState({username:'', password:''});
   }
   componentWillUnmount(){
-    // this.props.errors.delete();
+    this.props.removeSessionErrors(this.props);
   }
 
   update(field) {

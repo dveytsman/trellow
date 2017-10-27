@@ -14,7 +14,9 @@ class LoginForm extends React.Component{
   componentWillReceiveProps(){
     // this.setState({username:'', password:''});
   }
-
+  componentWillUnmount(){
+    this.props.removeSessionErrors(this.props);
+  }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
