@@ -108,4 +108,31 @@ body { margin:0; }
   margin-left: -350px !important;
   margin-bottom: 5px;
 }
+.guest-button{
+  height: 35px;
+  width: 440px;
+  font-size: 20px;
+  border-radius: .3em;
+  border: 0;
+  font-weight: 700;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  color: white ;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  padding-left: 20.8px;
+  padding-right: 20.8px;
+  height: 50px !important;
+  width: 235px !important;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
+.guest-button:hover{
+  background: #56a340;
+  cursor: pointer;
+}
+.guest-button:active{
+  background: #4b8831;
+
+}
 input:focus {outline:0;}

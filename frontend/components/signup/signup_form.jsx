@@ -79,6 +79,9 @@ class SignupForm extends React.Component{
               <div>
                 <input className="signup-form-button" type="submit" value="Create New Account" />
               </div>
+              <div className="link-to">
+                Already have an account? <Link to="/login">Log In</Link>
+              </div>
             </div>
           </form>
           <footer>

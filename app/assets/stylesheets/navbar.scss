@@ -1,6 +1,12 @@
 .navbar{
   background-color: #026aa7;
   color: white;
-  margin-top: 0px;
+  margin: 0px;
   display: flex;
+  height: 40px;
+}
+.navbar h3{
+  margin: 0px;
+  display: flex;
+  align-items: center;
 }

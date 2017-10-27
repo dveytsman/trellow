@@ -65,7 +65,7 @@ class LoginForm extends React.Component{
               </div>
               <div>
                 <input name="username" className="login-input" type='text' value={this.state.username}
-                  onChange={this.update('username')}placeholder="e.g., hercule@poirot.belgium"/>
+                  onChange={this.update('username')}placeholder="e.g., captainpicard"/>
               </div>
               <div>
                 <label htmlFor="password" className="login-password-form">Password</label>
@@ -76,6 +76,9 @@ class LoginForm extends React.Component{
               </div>
               <div>
                 <input className="login-form-button" type="submit" value="Log In" />
+              </div>
+              <div className="link-to">
+                Don't have and account? <Link to="/signup">Create a Trellow Account</Link>
               </div>
             </div>
           </form>

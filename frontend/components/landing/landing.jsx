@@ -34,7 +34,12 @@ class Landing extends React.Component{
       return <Link to="/login">log in instead</Link>;
     }
   }
-
+  handleGuest(e){
+    e.preventDefault();
+    let user = {username: 'picard', password: 'asdfasdf'};
+    this.setState({username: 'picard', password: 'asdfasdf'});
+    this.props.login({user}).then(() => this.setState({username: '', password: ''}));
+  }
 
   renderErrors() {
     return(
@@ -78,7 +83,11 @@ class Landing extends React.Component{
               </label>
               <br/>
               <br/>
-              <input id="landing-button" className="landing-main-button" type="submit" value="Log In" />
+              <div>
+                <input id="landing-button" className="landing-main-button" type="submit" value="Log In" />
+                <button onClick={this.handleGuest.bind(this)} className="guest-button" type="submit">Guest</button>
+
+              </div>
             </div>
           </form>
         </div>
