@@ -10,6 +10,20 @@
 }
 
 .dropdown-content{
-  display: flex;
+  display: hidden;
   flex-direction: column;
+}
+.dropdown-content:hover{
+  display: block;
+  flex-direction: column;
+}
+.dropdown{
+  background-color: #d6dadc;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  color: #4d4d4d;
 }

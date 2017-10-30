@@ -17,7 +17,7 @@ handleLogout(e){
   render(){
     if(this.props.loggedIn){
       return(
-        <div>
+        <div className="main" onClick={() => this.props.hideDropdown()}>
           <NavbarContainer/>
           <h1>logged {this.props.currentUser.username}</h1>
           <button onClick={this.handleLogout.bind(this)}>Log out</button>

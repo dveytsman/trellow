@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Navbar from './navbar';
+import UserDropDown from './user_dropdown_container';
 import { logout } from '../../actions/session_actions';
 import {showDropdown} from '../../actions/dropdown_actions';
 
@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     loggedIn: Boolean(state.session.currentUser),
     currentUser: state.session.currentUser,
-    dropdownVisible: state.dropdown
+    dropdownVisible: false
   });
 };
 
@@ -15,8 +15,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
   return({
     logout: () => dispatch(logout()),
-    showDropdown: () => dispatch(showDropdown()),
+    showDropdown: () => dispatch(showDropdown())
   });
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(UserDropDown);

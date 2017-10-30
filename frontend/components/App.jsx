@@ -7,6 +7,20 @@ import SignupFormContainer from './signup/signup_form_container';
 import {Route, Link, Switch, HashRouter } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { hideDropdown } from '../actions/dropdown_actions';
+import { connect } from 'react-redux';
+
+
+const mapStateToProps = (state, ownProps) => {
+  return {dropdownVisible: state.dropdown};
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return{
+    hideDropdown: () => dispatch(hideDropdown())
+  };
+};
+
 const App = () => {
   return(
     <div>
