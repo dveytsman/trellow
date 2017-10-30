@@ -15,17 +15,20 @@ class Navbar extends React.Component{
     //   dropdownVisible: true
     // });
     }
-  render(){
+    render(){
     if(this.props.loggedIn && this.props.dropdownVisible){
       const { currentUser, logout } = this.props;
       return(
         <div className="navbar">
           <div>
-            <h3>I am a navbar</h3>
+            <h3>Boards</h3>
           </div>
           <div><Link to="/">trellow</Link></div>
-          <div className="dropdown">
-            <UserDropDown currentUser={ currentUser } logout={ logout }/>
+          <div className="dropdown-visible">
+            {currentUser.username.slice(0,2).toUpperCase()}
+            <div className="dropdown">
+              <UserDropDown currentUser={ currentUser } logout={ logout }/>
+            </div>
           </div>
         </div>
       );
@@ -34,10 +37,10 @@ class Navbar extends React.Component{
       return(
         <div className="navbar">
           <div>
-            <h3>I am a navbar</h3>
+            <h3>Boards</h3>
           </div>
           <div><Link to="/">trellow</Link></div>
-          <div onClick={this.toggleDropDown.bind(this)} className="dropdown">
+          <div onClick={this.toggleDropDown.bind(this)} className="dropdown-visible">
             {currentUser.username.slice(0,2).toUpperCase()}
           </div>
         </div>
