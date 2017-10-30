@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import UserDropDown from './user_dropdown';
 import {showDropdown } from '../../actions/dropdown_actions';
 class Navbar extends React.Component{
@@ -15,6 +15,11 @@ class Navbar extends React.Component{
     //   dropdownVisible: true
     // });
     }
+    handleLinkClick(e){
+      e.preventDefault();
+      // Redirect to='/';
+
+    }
     render(){
     if(this.props.loggedIn && this.props.dropdownVisible){
       const { currentUser, logout } = this.props;
@@ -23,7 +28,9 @@ class Navbar extends React.Component{
           <div>
             <h3>Boards</h3>
           </div>
-          <div><Link to="/">trellow</Link></div>
+          <a href="/">
+            <div onClick={this.handleLinkClick.bind(this)} className="nav-image"><Link to="/"></Link></div>
+          </a>
           <div className="dropdown-visible">
             {currentUser.username.slice(0,2).toUpperCase()}
             <div className="dropdown">
@@ -39,7 +46,9 @@ class Navbar extends React.Component{
           <div>
             <h3>Boards</h3>
           </div>
-          <div><Link to="/">trellow</Link></div>
+          <a href="/">
+            <div onClick={this.handleLinkClick.bind(this)} className="nav-image"><Link to="/"></Link></div>
+          </a>
           <div onClick={this.toggleDropDown.bind(this)} className="dropdown-visible">
             {currentUser.username.slice(0,2).toUpperCase()}
           </div>

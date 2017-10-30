@@ -33,7 +33,14 @@
 .dropdown-content:hover{
 cursor: pointer;
 }
-
+.nav-image{
+    background-image: image_url('Navbar.png');
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 110px;
+    height: 40px;
+    margin-top: 5px;
+}
 .dropdown-visible{
   display: flex;
   font-size: 10pt;
