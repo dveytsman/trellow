@@ -60,6 +60,17 @@ cursor: pointer;
   cursor: pointer;
 }
 .leftDown{
+  background-color: #f9f9f9;
+  color: #444;
+  box-shadow: 1px 1px 1px lightgrey;
+  display: block;
+  top: 45px;
+  left: 3px;
+  position: absolute;
+  min-width: 300px;
+  z-index: 100;
+}
+.leftDown-visible{
   margin-left: 20px;
   background-color: #5297c1;
   height: 30px;
@@ -69,10 +80,10 @@ cursor: pointer;
   padding: 0 8px;
   font-size: 14px;
 }
-.leftDown:hover{
+.leftDown-visible:hover{
   background-color: #3a88b8;
   cursor: pointer;
 }
-.leftDown:active{
+.leftDown-visible:active{
   background-color: rgb(37, 121, 176);
 }

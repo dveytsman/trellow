@@ -30,7 +30,7 @@ class Navbar extends React.Component{
       const { currentUser, logout } = this.props;
       return(
         <div className="navbar">
-          <div onClick={this.toggleDropDown('leftDown')} className="leftDown">
+          <div onClick={this.toggleDropDown('leftDown')} className="leftDown-visible">
             <h3>Boards</h3>
             <div>
               <DropdownContainer name="leftDown">
@@ -43,8 +43,6 @@ class Navbar extends React.Component{
           </a>
           <div onClick={this.toggleDropDown("dropdown")} className="dropdown-visible">
             {currentUser.username.slice(0,2).toUpperCase()}
-            <div className="dropdown">
-            </div>
             <DropdownContainer name="dropdown">
               <UserDropDown currentUser={ currentUser } logout={ logout }/>
             </DropdownContainer>
