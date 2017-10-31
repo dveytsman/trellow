@@ -1,14 +1,14 @@
 import { SHOW_DROPDOWN, HIDE_DROPDOWN } from '../actions/dropdown_actions';
 
-const DropdownReducers = ( oldState = false, action ) => {
+const dropdownReducer = ( oldState = '', action ) => {
   switch (action.type) {
     case SHOW_DROPDOWN:
-      return true;
+      return oldState === action.dropdown ? '' : action.dropdown;
     case HIDE_DROPDOWN:
-      return false;
+      return '';
     default:
       return oldState;
   }
 };
 
-export default DropdownReducers;
+export default dropdownReducer;

@@ -2,58 +2,57 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import UserDropDown from './user_dropdown';
 import {showDropdown } from '../../actions/dropdown_actions';
+import BoardDropdownContainer from './boards_dropdown_container';
+import DropdownContainer from './dropdown_container';
 class Navbar extends React.Component{
   constructor(props){
     super(props);
     // this.state = this.props;
+    this.toggleDropDown.bind(this);
   }
-  toggleDropDown(e){
-    e.preventDefault();
-    e.stopPropagation();
-    this.props.showDropdown();
+  toggleDropDown(name){
+    return (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    this.props.showDropdown(name);
     // this.setState({
     //   dropdownVisible: true
     // });
-    }
+  };
+  }
     handleLinkClick(e){
       e.preventDefault();
       // Redirect to='/';
 
     }
     render(){
-    if(this.props.loggedIn && this.props.dropdownVisible){
+    if(this.props.loggedIn){
       const { currentUser, logout } = this.props;
       return(
         <div className="navbar">
-          <div>
+          <div onClick={this.toggleDropDown('leftDown')} className="leftDown">
             <h3>Boards</h3>
-          </div>
-          <a href="/">
-            <div onClick={this.handleLinkClick.bind(this)} className="nav-image"><Link to="/"></Link></div>
-          </a>
-          <div className="dropdown-visible">
-            {currentUser.username.slice(0,2).toUpperCase()}
-            <div className="dropdown">
-              <UserDropDown currentUser={ currentUser } logout={ logout }/>
+            <div>
+              <DropdownContainer name="leftDown">
+                <BoardDropdownContainer />
+              </DropdownContainer>
             </div>
           </div>
-        </div>
-      );
-    }else if(this.props.loggedIn && !this.props.dropdownVisible){
-      const { currentUser, logout } = this.props;
-      return(
-        <div className="navbar">
-          <div>
-            <h3>Boards</h3>
-          </div>
           <a href="/">
-            <div onClick={this.handleLinkClick.bind(this)} className="nav-image"><Link to="/"></Link></div>
+            <div onClick={this.handleLinkClick.bind(this)} className="nav-image"></div>
           </a>
-          <div onClick={this.toggleDropDown.bind(this)} className="dropdown-visible">
+          <div onClick={this.toggleDropDown("dropdown")} className="dropdown-visible">
             {currentUser.username.slice(0,2).toUpperCase()}
+            <div className="dropdown">
+            </div>
+            <DropdownContainer name="dropdown">
+              <UserDropDown currentUser={ currentUser } logout={ logout }/>
+            </DropdownContainer>
+
           </div>
         </div>
       );
+
 
     }else{
       return null;

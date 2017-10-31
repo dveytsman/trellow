@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
   return({
     logout: () => dispatch(logout()),
-    showDropdown: () => dispatch(showDropdown())
+    showDropdown: (dropdown) => dispatch(showDropdown(dropdown))
   });
 };
 

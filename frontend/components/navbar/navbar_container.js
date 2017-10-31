@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     loggedIn: Boolean(state.session.currentUser),
     currentUser: state.session.currentUser,
-    dropdownVisible: state.dropdown
+    dropdownVisible: state.dropdown,
   });
 };
 
@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
   return({
     logout: () => dispatch(logout()),
-    showDropdown: () => dispatch(showDropdown()),
+    showDropdown: (dropdown) => dispatch(showDropdown(dropdown)),
   });
 };
 
