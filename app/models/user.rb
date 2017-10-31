@@ -6,6 +6,11 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
+  has_many :boards,
+  primary_key: :id,
+  foreign_key: :creator_id,
+  class_name: :Board
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
