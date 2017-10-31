@@ -22,6 +22,12 @@ class LoginForm extends React.Component{
       [field]: e.currentTarget.value
     });
   }
+  handleGuest(e){
+    e.preventDefault();
+    let user = {username: 'picard', password: 'asdfasdf'};
+    this.setState({username: 'picard', password: 'asdfasdf'});
+    this.props.login({user}).then(() => this.setState({username: '', password: ''}));
+  }
 
   handleLogin(e){
     e.preventDefault();
@@ -77,7 +83,12 @@ class LoginForm extends React.Component{
                   onChange={this.update('password')} placeholder="e.g., •••••••"/>
               </div>
               <div>
-                <input className="login-form-button" type="submit" value="Log In" />
+                <div>
+                  <input className="login-form-button" type="submit" value="Log In" />
+                </div>
+                <div>
+                  <button onClick={this.handleGuest.bind(this)} className="guest-button" type="submit">Guest</button>
+                </div>
               </div>
               <div className="link-to">
                 Don't have and account? <Link to="/signup">Create a Trellow Account</Link>

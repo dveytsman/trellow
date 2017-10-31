@@ -1,6 +1,6 @@
 import React from 'react';
 import NavbarContainer from '../navbar/navbar_container';
-
+import BoardIndexContainer from './board_index_container';
 class Boards extends React.Component{
   constructor(props){
     super(props);
@@ -8,10 +8,10 @@ class Boards extends React.Component{
 
 
 
-handleLogout(e){
-  e.preventDefault();
-  this.props.logout();
-}
+  handleLogout(e){
+    e.preventDefault();
+    this.props.logout();
+  }
 
 
   render(){
@@ -21,6 +21,7 @@ handleLogout(e){
           <NavbarContainer/>
           <h1>logged {this.props.currentUser.username}</h1>
           <button onClick={this.handleLogout.bind(this)}>Log out</button>
+          <BoardIndexContainer/>
         </div>
       );
 
