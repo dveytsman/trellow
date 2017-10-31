@@ -15,7 +15,7 @@ export const fetchBoard = (id) => {
 export const createBoard = (board) => {
   return $.ajax({
     method: 'post',
-    url: '/api/boards/' + board.id,
+    url: '/api/boards',
     data: {board}
   });
 };

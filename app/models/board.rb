@@ -4,5 +4,5 @@ class Board < ApplicationRecord
   belongs_to :creator,
   primary_key: :id,
   foreign_key: :creator_id,
-  classname: :User
+  class_name: :User
 end
