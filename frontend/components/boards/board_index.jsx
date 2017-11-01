@@ -16,20 +16,26 @@ class BoardIndex extends React.Component{
   render(){
     if(Object.keys(this.props.boards).length === 0){
       return(
-        <ul>
-          <DropdownContainer name="create-down">
-            <CreateBoardContainer />
-          </DropdownContainer>
-        </ul>
+        <div className="board-index-div">
+          <ul>
+            <DropdownContainer name="create-down">
+              <CreateBoardContainer />
+            </DropdownContainer>
+          </ul>
+        </div>
       );
     }else {
       return(
-        <ul>
-          {this.props.boards.map(board => <Link to={`/boards/${board.id}`}><li key={board.id}>{board.title}</li></Link>)}
-          <DropdownContainer name="create-down">
-            <CreateBoardContainer />
-          </DropdownContainer>
-        </ul>
+          <ul className="board-index-div">
+            <div className="board-index-outer">
+            {this.props.boards.map(board => <Link to={`/boards/${board.id}`}><li
+              className="board-items" key={board.id}>{board.title}</li></Link>)}
+              <DropdownContainer className="board-items" name="create-down">
+                <CreateBoardContainer />
+              </DropdownContainer>
+            </div>
+            </ul>
+
       );
     }
   }

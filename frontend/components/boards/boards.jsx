@@ -34,7 +34,7 @@ class Boards extends React.Component{
           <h1>logged {this.props.currentUser.username}</h1>
           <button onClick={this.handleLogout.bind(this)}>Log out</button>
           <BoardIndexContainer/>
-          <div className="droppy" onClick={this.toggleDropDown('dropdown-create') }>
+          <div className="board-items" onClick={this.toggleDropDown('dropdown-create') }>
             <DropdownContainer name="dropdown-create">
               <CreateBoardContainer />
             </DropdownContainer>

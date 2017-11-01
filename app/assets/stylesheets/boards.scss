@@ -1,3 +1,30 @@
 // Place all the styles related to the boards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.board-items{
+  background-color: #1367a2;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  list-style: none;
+  color: white;
+  margin: 10px;
+  display: flex;
+  padding: 10px;
+  // align-items: center;
+  text-decoration: none;
+}
+.board-items a li{
+  text-decoration: none;
+}
+.board-index-div{
+display: flex;
+flex-wrap: wrap;
+text-decoration: none;
+}
+.board-index-outer{
+  clear: both;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,15 +1,12 @@
 @import './landing.scss';
 @import './login.scss';
 @import './signup.scss';
+@import './boards.scss';
+
 body{
   font-family: Arial;
 }
 
 .main{
   height: 100vh;
-}
-.droppy{
-  background-color: orange;
-  height: 200px;
-  width: 200px;
 }

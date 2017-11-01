@@ -10,7 +10,7 @@ class BoardShow extends React.Component{
   render(){
     return(
       <div>
-        <p>{this.props.board.title}</p>
+        <div>{this.props.board.title}</div>
       </div>
     );
   }
