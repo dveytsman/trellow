@@ -1,5 +1,6 @@
 import React from 'react';
 import {showBoardDropdown} from '../../actions/dropdown_actions';
+import BoardIndexContainer from '../boards/board_index_container';
 
 class BoardDropdown extends React.Component{
   constructor(props){
@@ -12,7 +13,7 @@ class BoardDropdown extends React.Component{
         <div>
           <ul>
             <li>
-              sample board
+              <BoardIndexContainer />
             </li>
           </ul>
         </div>

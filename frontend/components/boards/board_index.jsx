@@ -8,8 +8,6 @@ class BoardIndex extends React.Component{
   }
 
   componentDidMount(){
-
-    console.log('runs', this.props.boards);
     this.props.fetchBoards();
   }
 

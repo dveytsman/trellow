@@ -11,7 +11,6 @@ export const receiveBoard = (board) => {
 };
 
 export const receiveAllBoards = (boards) => {
-  console.log(boards);
   return{
     type: RECEIVE_ALL_BOARDS,
     boards
@@ -19,7 +18,6 @@ export const receiveAllBoards = (boards) => {
 };
 
 export const fetchBoards = () => (dispatch) => {
-  console.log('not running i bet');
   return(
     BoardApiUtil.fetchBoards().then((boards) => dispatch(receiveAllBoards(boards)))
   );

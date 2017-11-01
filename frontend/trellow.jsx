@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { signup, login, logout } from './util/session_api_util.js';
-import { createBoard, fetchBoards} from './util/board_api_util';
+import { createBoard, fetchBoards} from './actions/board_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
