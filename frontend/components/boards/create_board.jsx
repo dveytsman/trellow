@@ -26,7 +26,7 @@ class CreateBoard extends React.Component{
 
   render(){
     return(
-      <div onClick={(e)=> e.stopPropagation()}>
+      <div className="create_board_form" onClick={(e)=> e.stopPropagation()}>
         <p>Create Board</p>
         <hr/>
         <form onSubmit={this.handleSubmit.bind(this)}>

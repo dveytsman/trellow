@@ -37,3 +37,28 @@ a{
 li{
   list-style: none;
 }
+.create_board_form{
+  background-color: white;
+  color: black;
+  width: 320px;
+  height: 300px;
+  z-index: 5000000px;
+  left: 50px;
+}
+.dropdown-create{
+  position:absolute;
+  top: 0;
+  left:0;
+  margin-top: -18px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    border: 1px solid #D6DADC;
+}
+.dropdown-create p{
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.board-items-cont{
+  background-color: #e2e4e6 !important;
+  color: #838c91;
+  position: relative;
+}

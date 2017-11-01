@@ -23,7 +23,7 @@ class Boards extends React.Component{
   handleLogout(e){
     e.preventDefault();
     this.props.logout();
-    
+
   }
 
 
@@ -32,14 +32,8 @@ class Boards extends React.Component{
       return(
         <div className="main" onClick={() => this.props.hideDropdown()}>
           <NavbarContainer/>
-          <h1>logged {this.props.currentUser.username}</h1>
-          <button onClick={this.handleLogout.bind(this)}>Log out</button>
           <BoardIndexContainer/>
-          <div className="board-items" onClick={this.toggleDropDown('dropdown-create') }>
-            <DropdownContainer name="dropdown-create">
-              <CreateBoardContainer />
-            </DropdownContainer>
-          </div>
+
         </div>
       );
 
