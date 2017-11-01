@@ -30,11 +30,13 @@ class BoardIndex extends React.Component{
             <div className="board-index-outer">
             {this.props.boards.map(board => <Link to={`/boards/${board.id}`}><li
               className="board-items" key={board.id}>{board.title}</li></Link>)}
-              <DropdownContainer className="board-items" name="create-down">
-                <CreateBoardContainer />
-              </DropdownContainer>
+              <li>
+                <DropdownContainer className="create-board-items" name="create-down">
+                  <CreateBoardContainer />
+                </DropdownContainer>
+              </li>
             </div>
-            </ul>
+          </ul>
 
       );
     }

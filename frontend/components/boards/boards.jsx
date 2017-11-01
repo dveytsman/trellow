@@ -23,6 +23,7 @@ class Boards extends React.Component{
   handleLogout(e){
     e.preventDefault();
     this.props.logout();
+    
   }
 
 

@@ -14,7 +14,7 @@
   // align-items: center;
   text-decoration: none;
 }
-.board-items a li{
+.board-items a{
   text-decoration: none;
 }
 .board-index-div{
@@ -27,4 +27,13 @@ text-decoration: none;
   text-decoration: none;
   display: flex;
   flex-wrap: wrap;
+}
+a{
+  text-decoration: none;
+}
+.create-board-items{
+  background-color: grey !important;
+}
+li{
+  list-style: none;
 }
