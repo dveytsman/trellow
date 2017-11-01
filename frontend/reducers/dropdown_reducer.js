@@ -4,7 +4,7 @@ const dropdownReducer = ( oldState = '', action ) => {
   switch (action.type) {
     case SHOW_DROPDOWN:
       if(oldState === action.dropdown){
-        return '';
+        return null;
       }
       return action.dropdown;
 
