@@ -2,6 +2,7 @@ import { RECEIVE_BOARD, RECEIVE_ALL_BOARDS } from '../actions/board_actions';
 import merge from 'lodash/merge';
 
 const BoardReducer = (oldState={}, action) => {
+  
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_BOARD:

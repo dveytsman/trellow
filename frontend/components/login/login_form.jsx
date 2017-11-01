@@ -82,12 +82,12 @@ class LoginForm extends React.Component{
                 <input name="password" className="login-input" type="password" value={this.state.password}
                   onChange={this.update('password')} placeholder="e.g., •••••••"/>
               </div>
-              <div>
+              <div className="login-buttons">
                 <div>
                   <input className="login-form-button" type="submit" value="Log In" />
                 </div>
                 <div>
-                  <button onClick={this.handleGuest.bind(this)} className="guest-button" type="submit">Guest</button>
+                  <button id="guest-login" onClick={this.handleGuest.bind(this)} className="login-form-button" type="submit">Guest</button>
                 </div>
               </div>
               <div className="link-to">

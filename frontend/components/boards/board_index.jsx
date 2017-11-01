@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {receiveAllBoards} from '../../actions/board_actions';
+import {fetchBoards, createBoard} from '../../actions/board_actions';
 
 class BoardIndex extends React.Component{
   constructor(props){
@@ -8,14 +8,16 @@ class BoardIndex extends React.Component{
   }
 
   componentDidMount(){
-    this.props.receiveAllBoards(this.props.boards);
+
+    console.log('runs', this.props.boards);
+    this.props.fetchBoards();
   }
 
   render(){
-    if(Object.keys(this.props).length === 0){
+    if(Object.keys(this.props.boards).length === 0){
       return null;
     }else {
-      return this.props.boards.map(board => <li>{board.title}</li>);
+      return this.props.boards.map(board => <li key={board.id}>{board.title}</li>);
     }
   }
 }

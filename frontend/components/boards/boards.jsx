@@ -22,6 +22,7 @@ class Boards extends React.Component{
           <h1>logged {this.props.currentUser.username}</h1>
           <button onClick={this.handleLogout.bind(this)}>Log out</button>
           <BoardIndexContainer/>
+
         </div>
       );
 

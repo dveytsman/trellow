@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    receiveAllBoards: (boards) => dispatch(receiveAllBoards(boards)),
+    fetchBoards: (boards) => dispatch(fetchBoards(boards)),
     createBoard: (board) => dispatch(createBoard(board))
   };
 };
