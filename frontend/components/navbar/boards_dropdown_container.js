@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BoardDropdown from './boards_dropdown';
-import showBoardDropdown from '../../actions/dropdown_actions';
+import {showDropdown} from '../../actions/dropdown_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     boarddropdownVisible: state.boarddropdown
@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    showBoardDropdown: () => dispatch(showBoardDropdown())
+    showDropdown: (name) => dispatch(showDropdown(name))
   };
 };
 

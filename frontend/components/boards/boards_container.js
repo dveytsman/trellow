@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Boards from './boards';
 import { logout } from '../../actions/session_actions';
-import { hideDropdown } from '../../actions/dropdown_actions';
+import { hideDropdown, showDropdown } from '../../actions/dropdown_actions';
 import { fetchBoards, fetchBoard, createBoard } from '../../actions/board_actions';
 
 const mapStateToProps = (state, ownProps) => {
@@ -20,7 +20,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     hideDropdown: () => dispatch(hideDropdown()),
     fetchBoards: () => dispatch(fetchBoards()),
     fetchBoard: (id)=> dispatch(fetchBoard(id)),
-    createBoard: (board) => dispatch(createBoard(board))
+    createBoard: (board) => dispatch(createBoard(board)),
+    showDropdown: (name) => dispatch(showDropdown(name))
   });
 };
 

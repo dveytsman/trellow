@@ -5,10 +5,10 @@ export const fetchBoards = () => {
   });
 };
 
-export const fetchBoard = (id) => {
+export const fetchBoard = (boardId) => {
   return $.ajax({
     method: 'get',
-    url: '/api/boards/' + id
+    url: '/api/boards/' + boardId
   });
 };
 

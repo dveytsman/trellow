@@ -1,5 +1,5 @@
 import React from 'react';
-import createBoard from '../../actions/board_actions';
+
 
 class CreateBoard extends React.Component{
   constructor(props){
@@ -10,19 +10,23 @@ class CreateBoard extends React.Component{
 
   }
   handleChange(e){
+    e.stopPropagation();
+
     this.setState({title: e.currentTarget.value});
   }
 
   handleSubmit(e){
     e.preventDefault();
+    e.stopPropagation();
     this.props.createBoard({title: this.state.title});
     this.setState({title: ''});
+    this.props.showDropdown();
   }
 
 
   render(){
     return(
-      <div>
+      <div onClick={(e)=> e.stopPropagation()}>
         <p>Create Board</p>
         <hr/>
         <form onSubmit={this.handleSubmit.bind(this)}>

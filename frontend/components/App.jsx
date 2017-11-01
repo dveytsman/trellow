@@ -9,6 +9,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { hideDropdown } from '../actions/dropdown_actions';
 import { connect } from 'react-redux';
+import BoardShowContainer from './boards/board_show_container';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -29,6 +30,7 @@ const App = () => {
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route exact path="/" component={LandingContainer}/>
+      <Route path="/boards/:boardId" component={BoardShowContainer}/>
       <div>
         <BoardsContainer />
       </div>
