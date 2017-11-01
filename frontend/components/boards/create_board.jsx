@@ -20,7 +20,7 @@ class CreateBoard extends React.Component{
     e.stopPropagation();
     this.props.createBoard({title: this.state.title});
     this.setState({title: ''});
-    this.props.showDropdown();
+    this.props.showDropdown("create-down");
   }
 
 
