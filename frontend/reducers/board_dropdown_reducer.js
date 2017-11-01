@@ -7,7 +7,7 @@ const BoardDropdownReducer = (oldState=false, action) => {
     case HIDE_DROPDOWN:
       return false;
     default:
-      return false;
+      return oldState;
   }
 };
 
