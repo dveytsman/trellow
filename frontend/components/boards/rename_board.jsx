@@ -27,11 +27,11 @@ class RenameBoard extends React.Component{
   render(){
     return(
       <div className="create_board_form" onClick={(e)=> e.stopPropagation()}>
-        <p>Rename Board</p>
-        <hr/>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input value={this.state.title} onChange={this.handleChange.bind(this)} type="text" />
-          <input type="submit" value="Update"/>
+        <p className='p'>Rename Board</p>
+        <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
+          <h3>Title</h3>
+          <input className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" />
+          <input className='creation-submit' type="submit" value="Update"/>
         </form>
       </div>
     );

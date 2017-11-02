@@ -41,11 +41,18 @@ li{
   list-style: none;
 }
 .create_board_form{
+  font-size: 18px;
   background-color: white;
-  color: black;
+  border: 1px solid #d6dadc;
+  color: #838c91;
   width: 320px;
   height: 300px;
   left: 50px;
+}
+.create_board_form p{
+  border-bottom: 1px solid #d6dadc;
+  padding-bottom: 20px;
+
 }
 .dropdown-create{
   position:absolute;
@@ -95,4 +102,51 @@ li{
   position: absolute;
   top:0;
   left:0;
+}
+.creation-form{
+  display:flex;
+  flex-direction: column;
+}
+.creation-form h3{
+  color: #333;
+  position: absolute;
+  left: 20px;
+}
+.creation-submit{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: .4em;
+  background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+  color: white;
+  padding-top: 11.2px;
+  padding-bottom: 11.2px;
+  padding-left: 20.8px;
+  padding-right: 20.8px;
+  text-decoration: none;
+  border: none;
+}
+.creation-input{
+  padding-left: 10px;
+  background-color: #e2e4e6;
+  border: 1px solid #CDD2D4;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+  line-height: 35px;
+  border-radius: 3px;
+}
+.creation-input:hover{
+
+}
+.creation-input:focus{
+  border: 1px solid #318fca;
+  background-color: white;
+  box-shadow: 0 0 2px #298FCA;
+}
+.p{
+  margin-left: 20px;
 }

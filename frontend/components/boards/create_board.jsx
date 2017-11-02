@@ -27,10 +27,10 @@ class CreateBoard extends React.Component{
     return(
       <div className="create_board_form" onClick={(e)=> e.stopPropagation()}>
         <p>Create Board</p>
-        <hr/>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Board Name"/>
-          <input type="submit" value="Create"/>
+        <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
+          <h3>Title</h3>
+          <input className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Board Name"/>
+          <input className='creation-submit' type="submit" value="Create"/>
         </form>
       </div>
     );
