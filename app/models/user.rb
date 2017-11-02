@@ -11,6 +11,10 @@ class User < ApplicationRecord
   foreign_key: :creator_id,
   class_name: :Board
 
+  has_many :lists,
+  through: :boards,
+  source: :lists
+  
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
