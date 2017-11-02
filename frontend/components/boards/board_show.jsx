@@ -1,5 +1,5 @@
 import React from 'react';
-
+import NavbarContainer from '../navbar/navbar_container';
 class BoardShow extends React.Component{
   constructor(props){
     super(props);
@@ -10,6 +10,7 @@ class BoardShow extends React.Component{
   render(){
     return(
       <div>
+        <NavbarContainer/>
         <div>{this.props.board.title}</div>
       </div>
     );

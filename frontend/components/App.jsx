@@ -27,13 +27,13 @@ const App = () => {
     <div>
       <header>
       </header>
-      <AuthRoute path="/login" component={LoginFormContainer} />
-      <AuthRoute path="/signup" component={SignupFormContainer} />
-      <Route exact path="/" component={LandingContainer}/>
-      <Route exact path="/boards/:boardId" component={BoardShowContainer}/>
-      <div>
-        <BoardsContainer />
-      </div>
+      <Switch>
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <ProtectedRoute exact path="/boards/:boardId" component={BoardShowContainer}/>
+        <ProtectedRoute exact path="/boards" component={BoardsContainer}/>
+        <AuthRoute path="/" component={LandingContainer}/>
+    </Switch>
     </div>
   );
 };
