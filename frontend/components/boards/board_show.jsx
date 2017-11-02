@@ -8,10 +8,11 @@ class BoardShow extends React.Component{
     this.props.fetchBoard(this.props.match.params.boardId);
   }
   render(){
+    let content = (this.props.board) ? this.props.board.title : null;
     return(
       <div>
         <NavbarContainer/>
-        <div>{this.props.board.title}</div>
+        <div>{content}</div>
       </div>
     );
   }

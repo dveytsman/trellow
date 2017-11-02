@@ -38,9 +38,9 @@ class Navbar extends React.Component{
               </DropdownContainer>
             </div>
           </div>
-          <a href="/">
-            <div onClick={this.handleLinkClick.bind(this)} className="nav-image"></div>
-          </a>
+          <Link to="/boards">
+            <div className="nav-image"></div>
+          </Link>
           <div onClick={this.toggleDropDown("dropdown")} className="dropdown-visible">
             {currentUser.username.slice(0,2).toUpperCase()}
             <DropdownContainer name="dropdown">
