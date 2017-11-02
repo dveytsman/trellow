@@ -7,7 +7,6 @@ import DropdownContainer from './dropdown_container';
 class Navbar extends React.Component{
   constructor(props){
     super(props);
-    // this.state = this.props;
     this.toggleDropDown.bind(this);
   }
   toggleDropDown(name){
@@ -15,29 +14,21 @@ class Navbar extends React.Component{
       e.preventDefault();
       e.stopPropagation();
     this.props.showDropdown(name);
-    // this.setState({
-    //   dropdownVisible: true
-    // });
   };
   }
     handleLinkClick(e){
       e.preventDefault();
-      // Redirect to='/';
-
     }
     render(){
     if(this.props.loggedIn){
       const { currentUser, logout } = this.props;
       return(
         <div className="navbar">
-          <div onClick={this.toggleDropDown('leftDown')} className="leftDown-visible">
-            <h3>Boards</h3>
-            <div>
-              <DropdownContainer name="leftDown">
-                <BoardDropdownContainer />
-              </DropdownContainer>
-            </div>
-          </div>
+            <Link to="/boards" className="leftDown-visible">
+              Boards
+              <div></div>
+            </Link>
+
           <Link to="/boards">
             <div className="nav-image"></div>
           </Link>

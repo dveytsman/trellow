@@ -40,8 +40,8 @@ class Landing extends React.Component{
   }
   handleGuest(e){
     e.preventDefault();
-    let user = {username: 'picard', password: 'asdfasdf'};
-    this.setState({username: 'picard', password: 'asdfasdf'});
+    let user = {username: 'guest', password: 'newlife'};
+    this.setState({username: 'guest', password: 'newlife'});
     this.props.login({user}).then(() => this.setState({username: '', password: ''}));
   }
 

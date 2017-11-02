@@ -71,6 +71,8 @@ cursor: pointer;
   z-index: 100;
 }
 .leftDown-visible{
+  color: white;
+  font-weight: 600;
   margin-left: 20px;
   background-color: #5297c1;
   height: 30px;
@@ -78,7 +80,7 @@ cursor: pointer;
   align-items: center;
   border-radius: 4px;
   padding: 0 8px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .leftDown-visible:hover{
   background-color: #3a88b8;
