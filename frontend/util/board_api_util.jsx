@@ -19,3 +19,17 @@ export const createBoard = (board) => {
     data: {board}
   });
 };
+export const deleteBoard = (boardId) => {
+  return $.ajax({
+    method: 'delete',
+    url: '/api/boards/' + boardId
+  });
+};
+
+export const updateBoard = (board) => {
+  return $.ajax({
+    method: 'patch',
+    url: '/api/boards/' + board.id,
+    data: {board}
+  });
+};

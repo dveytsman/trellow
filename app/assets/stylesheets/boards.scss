@@ -64,3 +64,35 @@ li{
   color: #838c91;
   position: relative;
 }
+.edity{
+  background-color: #237abf;
+  width: 300px;
+  height: 40px;
+}
+.blue{
+  background-color: #237abf;
+  height: 100vh;
+}
+.board-show-container{
+  display: flex;
+  justify-content: space-between;
+}
+.delete{
+  color: white;
+  text-decoration: underline;
+  margin: 20px;
+}
+.delete:hover{
+  cursor: pointer;
+}
+.edity{
+  position: relative;
+  height: 20px;
+  color: white;
+  margin-left: 20px;
+}
+.create_board_form{
+  position: absolute;
+  top:0;
+  left:0;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 
 
-class CreateBoard extends React.Component{
+class RenameBoard extends React.Component{
   constructor(props){
     super(props);
+
     this.state = {
       title: props.board ? props.board.title : '',
     };
@@ -17,20 +18,20 @@ class CreateBoard extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     e.stopPropagation();
-    this.props.createBoard({title: this.state.title});
-    this.setState({title: ''});
-    this.props.showDropdown("create-down");
+
+    this.props.updateBoard({title: this.state.title, id: this.props.id});
+    this.props.showDropdown("update-dropdown");
   }
 
 
   render(){
     return(
       <div className="create_board_form" onClick={(e)=> e.stopPropagation()}>
-        <p>Create Board</p>
+        <p>Rename Board</p>
         <hr/>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Board Name"/>
-          <input type="submit" value="Create"/>
+          <input value={this.state.title} onChange={this.handleChange.bind(this)} type="text" />
+          <input type="submit" value="Update"/>
         </form>
       </div>
     );
@@ -40,4 +41,4 @@ class CreateBoard extends React.Component{
 
 
 
-export default CreateBoard;
+export default RenameBoard;

@@ -19,14 +19,14 @@ class BoardIndex extends React.Component{
       e.preventDefault();
       e.stopPropagation();
       this.props.showDropdown(name);
-    // this.setState({
-    //   dropdownVisible: true
-    // });
     };
   }
 
   render(){
-    console.log(Object.keys(this.props.boards).length);
+    const boardsIndex = this.props.boards.map(board => <li><Link key={board.id}
+    className="board-items" to={`/boards/${board.id}`}>
+      {board.title}</Link></li>);
+
     if(Object.keys(this.props.boards).length === 0){
       return(
         <div className="board-index-div">
@@ -44,8 +44,7 @@ class BoardIndex extends React.Component{
       return(
           <ul className="board-index-div">
             <div className="board-index-outer">
-            {this.props.boards.map(board => <Link key={board.id} to={`/boards/${board.id}`}><li
-              className="board-items" >{board.title}</li></Link>)}
+              {boardsIndex}
               <div className="board-items-cont board-items" onClick={this.toggleDropDown('dropdown-create') }>
                 <p>Create Board</p>
                 <DropdownContainer name="dropdown-create">
