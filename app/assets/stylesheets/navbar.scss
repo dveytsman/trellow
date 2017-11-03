@@ -58,6 +58,10 @@ cursor: pointer;
 }
 .dropdown-visible:hover{
   cursor: pointer;
+  background-color: #E0E0E0;
+}
+.dropdown-visible:active{
+  background-color: #cacaca;
 }
 .leftDown{
   background-color: #f9f9f9;
