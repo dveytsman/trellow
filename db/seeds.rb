@@ -14,3 +14,4 @@ u1 = User.create!(username: "guest", password: "newlife")
 b1 = Board.create!(creator_id: u1.id, title: "I am a board")
 
 l1 = List.create!(creator_id: u1.id , title: "I am a list" ,board_id: b1.id)
+l2 = List.create!(creator_id: u1.id, title: "I am a second list", board_id: b1.id)
