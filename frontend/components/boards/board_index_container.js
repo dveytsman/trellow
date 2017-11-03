@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { receiveAllBoards, fetchBoard, fetchBoards, createBoard } from '../../actions/board_actions';
 import BoardIndex from './board_index';
-import {showDropdown} from '../../actions/dropdown_actions';
+import { showDropdown } from '../../actions/dropdown_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {

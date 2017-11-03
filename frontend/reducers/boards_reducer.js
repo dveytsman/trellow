@@ -6,7 +6,7 @@ const BoardReducer = (oldState={}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_BOARD:
-      return merge({}, oldState, {[action.board.id]: action.board});
+      return merge({}, oldState, {[action.payload.board.id]: action.payload.board});
     case RECEIVE_ALL_BOARDS:
       return action.boards;
     case REMOVE_BOARD:

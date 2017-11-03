@@ -6,8 +6,10 @@ class Board < ApplicationRecord
   foreign_key: :creator_id,
   class_name: :User
 
-  has_many :lists,
+  has_many :lists, dependent: :destroy,
   primary_key: :id,
   foreign_key: :board_id,
   class_name: :List
+
+
 end

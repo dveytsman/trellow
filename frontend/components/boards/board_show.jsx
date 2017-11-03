@@ -3,6 +3,7 @@ import NavbarContainer from '../navbar/navbar_container';
 import { withRouter } from 'react-router-dom';
 import DropdownContainer from '../navbar/dropdown_container';
 import RenameBoardContainer from './rename_board_container';
+import ListIndexContainer from '../lists/list_index_container';
 
 class BoardShow extends React.Component{
   constructor(props){
@@ -27,6 +28,7 @@ class BoardShow extends React.Component{
     };
   }
   render(){
+    
     let content = (this.props.board) ? this.props.board.title : null;
     return(
       <div className="blue" onClick={this.toggleDropDown('')}>
@@ -45,6 +47,7 @@ class BoardShow extends React.Component{
             Click here to delete the board
           </div>
         </div>
+        <ListIndexContainer match={this.match} />
       </div>
     );
   }

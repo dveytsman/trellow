@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Board.destroy_all
+List.destroy_all
+
+u1 = User.create!(username: "guest", password: "newlife")
+
+b1 = Board.create!(creator_id: u1.id, title: "I am a board")
+
+l1 = List.create!(creator_id: u1.id , title: "I am a list" ,board_id: b1.id)
