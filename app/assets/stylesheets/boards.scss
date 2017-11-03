@@ -150,3 +150,19 @@ li{
 .p{
   margin-left: 20px;
 }
+.list-container{
+  margin-left: -30px;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-items{
+  display: flex;
+  background-color: #e2e4e6;
+  width: 270px;
+  min-height: 70px;
+  margin-left: 10px;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-top: 10px;
+}

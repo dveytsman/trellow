@@ -20,11 +20,11 @@ class ListIndex extends React.Component{
       );
     });
     return(
-      <div>
         <ul>
-          {listsIndex}
+          <div  className='list-container'>
+            {listsIndex}
+          </div>
         </ul>
-      </div>
     );
   }
 }

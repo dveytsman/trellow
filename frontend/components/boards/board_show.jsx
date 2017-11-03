@@ -46,7 +46,7 @@ class BoardShow extends React.Component{
             Click here to delete the board
           </div>
         </div>
-        <ListIndexContainer board={this.props.board}/>
+        <ListIndexContainer className='lists-container' board={this.props.board}/>
       </div>
     );
   }
