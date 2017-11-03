@@ -6,8 +6,8 @@ class ListIndex extends React.Component{
   }
 
   render(){
-
-    const listsIndex = this.props.lists.map(list => {
+    let content = (this.props.lists === null) ? [] : this.props.lists;
+    const listsIndex = content.map(list => {
       return(
         <li key={list.id}
           className="list-items">{list.title}

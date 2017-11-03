@@ -28,7 +28,6 @@ class BoardShow extends React.Component{
     };
   }
   render(){
-    
     let content = (this.props.board) ? this.props.board.title : null;
     return(
       <div className="blue" onClick={this.toggleDropDown('')}>
@@ -47,7 +46,7 @@ class BoardShow extends React.Component{
             Click here to delete the board
           </div>
         </div>
-        <ListIndexContainer match={this.match} />
+        <ListIndexContainer board={this.props.board}/>
       </div>
     );
   }

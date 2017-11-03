@@ -5,7 +5,8 @@ import { showDropdown } from '../../actions/dropdown_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    lists: Object.values(state.lists)
+    board: ownProps.board,
+    lists: (ownProps.board) ? ownProps.board.listIds.map(id => state.lists[id]) : null
   };
 };
 
