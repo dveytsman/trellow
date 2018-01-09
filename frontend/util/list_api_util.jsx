@@ -3,7 +3,7 @@
 export const createList = (list) => {
   return $.ajax({
     method: 'post',
-    url: '/api/boards',
+    url: '/api/boards/' + list.board_id + '/lists',
     data: {list}
   });
 };

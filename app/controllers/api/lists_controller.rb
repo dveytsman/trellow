@@ -4,7 +4,8 @@ class Api::ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.board_id = current_board_id
+    @list.board_id = params[:board_id]
+    @list.creator_id = current_user.id
     if @list.save
       render json: @list
     else
