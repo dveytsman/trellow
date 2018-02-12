@@ -21,9 +21,6 @@ const BoardReducer = (oldState={}, action) => {
     case  REMOVE_LIST:
 
       let newState3 = merge({}, oldState);
-      // console.log(action.payload);
-      console.log(action);
-// debugger
       let newArr = newState3[action.listId.board_id].listIds.filter(listId => listId !== action.listId.id);
        newState3[action.listId.board_id].listIds = newArr;
       return newState3;
