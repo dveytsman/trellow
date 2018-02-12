@@ -10,6 +10,7 @@ class ListIndex extends React.Component{
   constructor(props){
     super(props);
 
+    this.deleteList = this.deleteList.bind(this);
   }
 
   toggleDropDown(name){
@@ -24,9 +25,15 @@ class ListIndex extends React.Component{
 
   }
 
+  deleteList(e, list){
+    e.preventDefault();
+    this.props.deleteList(list);
+
+  }
+
 
   render(){
-
+// debugger
     var content = (this.props.lists === null) ? [] : this.props.lists;
 
     const listsIndex = content.map(list => {
@@ -36,6 +43,9 @@ class ListIndex extends React.Component{
       return(
         <li key={list.id}
           className="list-items">{list.title}
+          <button onClick={(e) => this.deleteList(e, list)}>
+            delete
+          </button>
         </li>
       );
     });
