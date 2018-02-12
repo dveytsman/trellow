@@ -23,10 +23,10 @@ class Api::ListsController < ApplicationController
   end
 
   def destroy
-    @list = list.find(params[:id])
+    @list = List.find(params[:id])
     @list.destroy
     @board = Board.find(current_board_id)
-    render 'api/boards/show'
+    # render '/api/boards/show'
   end
 
   def list_params
