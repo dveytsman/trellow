@@ -1,5 +1,6 @@
 import { RECEIVE_BOARD, RECEIVE_ALL_BOARDS, REMOVE_BOARD } from '../actions/board_actions';
 import { RECEIVE_LIST } from '../actions/list_actions';
+import { REMOVE_LIST } from '../actions/list_actions';
 import merge from 'lodash/merge';
 
 const BoardReducer = (oldState={}, action) => {
@@ -17,6 +18,15 @@ const BoardReducer = (oldState={}, action) => {
       let newState2 = merge({}, oldState);
       newState2[action.payload.board_id].listIds.push(action.payload.id);
       return newState2;
+    case  REMOVE_LIST:
+
+      let newState3 = merge({}, oldState);
+      // console.log(action.payload);
+      console.log(action);
+// debugger
+      let newArr = newState3[action.listId.board_id].listIds.filter(listId => listId !== action.listId.id);
+       newState3[action.listId.board_id].listIds = newArr;
+      return newState3;
     default:
       return oldState;
   }
