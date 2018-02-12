@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     showDropdown: (name) => dispatch(showDropdown(name)),
     createList: (list) => dispatch(createList(list)),
     updateList: (list) => dispatch(updateList(list)),
-    deleteList: (listId) => dispatch(deleteList(listId))
+    deleteList: (list) => dispatch(deleteList(list))
   };
 };
 
