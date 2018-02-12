@@ -7,10 +7,10 @@ export const createList = (list) => {
     data: {list}
   });
 };
-export const deleteList = (listId) => {
+export const deleteList = (list) => {
   return $.ajax({
     method: 'delete',
-    url: '/api/boards/' + listId
+    url: '/api/boards/' + list.board_id + '/lists/' + list.id 
   });
 };
 
