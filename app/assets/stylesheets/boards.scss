@@ -8,10 +8,9 @@
   border-radius: 5px;
   list-style: none;
   color: white;
-  margin: 20px 10px;
+  margin-left: 10px;
   display: flex;
   padding: 10px;
-  // align-items: center;
   text-decoration: none;
 }
 .board-items a{
@@ -154,7 +153,8 @@ li{
   margin-left: -30px;
   margin-top: 40px;
   display: flex;
-  flex-wrap: wrap;
+  width: max-content;
+  // flex-wrap: wrap;
 }
 .list-items{
   display: flex;
