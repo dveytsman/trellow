@@ -32,21 +32,23 @@ class BoardShow extends React.Component{
     return(
       <div className="blue" onClick={this.toggleDropDown('')}>
         <NavbarContainer/>
-        <div className="board-show-container">
-          <div className="edity" onClick={this.toggleDropDown('update-dropdown')}>
-            <h3>
-              {content}
-            </h3>
-            <p>click to rename this board</p>
-            <DropdownContainer className="edit-form" name="update-dropdown">
-              <RenameBoardContainer match={this.props.match}/>
-            </DropdownContainer>
-          </div>
-          <div className='delete' onClick={this.handleDelete.bind(this)}>
-            Click here to delete the board
+          <div className="background-board-show">
+            <div className="board-show-container">
+              <div className="edity" onClick={this.toggleDropDown('update-dropdown')}>
+                <h3>
+                  {content}
+                </h3>
+                <p>click to rename this board</p>
+                <DropdownContainer className="edit-form" name="update-dropdown">
+                  <RenameBoardContainer title={content} match={this.props.match}/>
+                </DropdownContainer>
+              </div>
+            <div className='delete' onClick={this.handleDelete.bind(this)}>
+              Click here to delete the board
           </div>
         </div>
         <ListIndexContainer className='lists-container' board={this.props.board}/>
+      </div>
       </div>
     );
   }
