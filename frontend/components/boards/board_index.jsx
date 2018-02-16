@@ -23,7 +23,7 @@ class BoardIndex extends React.Component{
   }
 
   render(){
-    const boardsIndex = this.props.boards.map(board => <li key={board.id}><Link 
+    const boardsIndex = this.props.boards.map(board => <li key={board.id}><Link
     className="board-items" to={`/boards/${board.id}`}>
       {board.title}</Link></li>);
 
@@ -42,6 +42,7 @@ class BoardIndex extends React.Component{
       );
     }else {
       return(
+        <div className="other-board-index">
           <ul className="board-index-div">
             <div className="board-index-outer">
               {boardsIndex}
@@ -53,6 +54,7 @@ class BoardIndex extends React.Component{
               </div>
             </div>
           </ul>
+        </div>
 
       );
     }
