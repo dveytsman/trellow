@@ -8,7 +8,7 @@
   border-radius: 5px;
   list-style: none;
   color: white;
-  margin-left: 10px;
+  margin: 10px;
   display: flex;
   padding: 10px;
   text-decoration: none;
@@ -16,19 +16,41 @@
 .board-items a{
   text-decoration: none;
 }
+.other-board-index{
+  // height: 100vh;
+  background-color: white;
+  position: absolute;
+  top:40px;
+  height: 100vh;
+}
+li{
+  // height: 100px;
+}
 .board-index-div{
-display: flex;
-flex-wrap: wrap;
-text-decoration: none;
-justify-content: space-between;
-text-align: center;
+// display: flex;
+// flex-wrap: wrap;
+// text-decoration: none;
+// justify-content: space-between;
+// text-align: center;
 }
 .board-index-outer{
   margin: 0 auto;
+  // background-color: white;
+  width: 100vw;
+  // height: 100vh;
   clear: both;
   text-decoration: none;
   display: flex;
   flex-wrap: wrap;
+  // position: absolute;
+  // top: 40px;
+  // left: 0px;
+}
+.create-list{
+  width: 280px;
+  height: 80px;
+  margin-left: 10px;
+  border-radius: 4px;
 }
 a{
   text-decoration: none;
