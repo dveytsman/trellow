@@ -36,7 +36,7 @@ li{
 .board-index-outer{
   margin: 0 auto;
   // background-color: white;
-  width: 100vw;
+  // width: 100vw;
   // height: 100vh;
   clear: both;
   text-decoration: none;
@@ -96,28 +96,37 @@ li{
   background-color: #237abf;
   width: 300px;
   height: 40px;
+  position: fixed;
+  left: 0;
+  height: 20px;
+  color: white;
+  margin-left: 20px;
 }
 .blue{
   background-color: #237abf;
   height: 100vh;
+  width: 100vw;
 }
 .board-show-container{
   display: flex;
   justify-content: space-between;
 }
+.background-board-show{
+  height: 100vh;
+  width: max-content;
+  padding-top: 40px;
+  background-color: #237abf;
+
+}
 .delete{
+  position:fixed;
+  right:0;
   color: white;
   text-decoration: underline;
   margin: 20px;
 }
 .delete:hover{
   cursor: pointer;
-}
-.edity{
-  position: relative;
-  height: 20px;
-  color: white;
-  margin-left: 20px;
 }
 .create_board_form{
   position: absolute;
@@ -173,7 +182,7 @@ li{
 }
 .list-container{
   margin-left: -30px;
-  margin-top: 40px;
+  margin-top: 100px;
   display: flex;
   width: max-content;
   // flex-wrap: wrap;
