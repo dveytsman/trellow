@@ -6,6 +6,7 @@
 body{
   font-family: Arial;
   background-color: #237abf;
+  padding-top: 50px;
 }
 
 .main{
@@ -13,6 +14,11 @@ body{
 }
 
 .delete-list-button{
-
+  margin-right: 10px;
   height: 10px;
+}
+
+
+.list-items{
+  justify-content: space-between;;
 }
