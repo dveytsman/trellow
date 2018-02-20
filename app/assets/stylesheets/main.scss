@@ -13,9 +13,24 @@ body{
   height: 100vh;
 }
 
+.delete-list-button:focus{
+  outline:none;
+}
+
 .delete-list-button{
+  // background-color: linear-gradient(top, #eee, hotpink) !important;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  border-radius: 3px;
+  color: #333;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-right: 10px;
-  height: 10px;
+  height: max-content;
 }
 
 
