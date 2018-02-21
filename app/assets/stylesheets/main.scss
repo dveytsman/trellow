@@ -19,20 +19,34 @@ body{
 
 .delete-list-button{
   // background-color: linear-gradient(top, #eee, hotpink) !important;
+  background: #d7d9db;
+  background-image: -webkit-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: -moz-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: -ms-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: -o-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: linear-gradient(to bottom, #d7d9db, #8e9294);
   border: 1px solid #ccc;
   border-bottom: 1px solid #bbb;
   border-radius: 3px;
   color: #333;
   font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  padding: 8px 0;
   text-align: center;
-  text-shadow: 0 1px 0 #eee;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-right: 10px;
   height: max-content;
 }
-
+.delete-list-button:hover{
+  background: #fc3c3c;
+  background-image: -webkit-linear-gradient(top, #fc3c3c, #ba0606);
+  background-image: -moz-linear-gradient(top, #fc3c3c, #ba0606);
+  background-image: -ms-linear-gradient(top, #fc3c3c, #ba0606);
+  background-image: -o-linear-gradient(top, #fc3c3c, #ba0606);
+  background-image: linear-gradient(to bottom, #fc3c3c, #ba0606);
+  text-decoration: none;
+}
 
 .list-items{
   justify-content: space-between;;
