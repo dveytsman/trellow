@@ -18,7 +18,7 @@ In order to use this web application you must be logged in. If you just want to 
 ![Login form](https://github.com/Thrage1/trellow/blob/master/app/assets/images/trellow-login.png "Login Form")
 
 ### Step 2
-Once logged in you will be confronted with the index of all of your accessible forms. See Below.
+Once logged in you will be confronted with the index of all of your accessible boards. See Below.
 ![Board Index Page](https://github.com/Thrage1/trellow/blob/master/app/assets/images/board_index.png "Board Index Page")
 
 ### Step 3
