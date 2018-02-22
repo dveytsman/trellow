@@ -39,12 +39,7 @@ body{
   height: max-content;
 }
 .delete-list-button:hover{
-  background: #fc3c3c;
-  background-image: -webkit-linear-gradient(top, #fc3c3c, #ba0606);
-  background-image: -moz-linear-gradient(top, #fc3c3c, #ba0606);
-  background-image: -ms-linear-gradient(top, #fc3c3c, #ba0606);
-  background-image: -o-linear-gradient(top, #fc3c3c, #ba0606);
-  background-image: linear-gradient(to bottom, #fc3c3c, #ba0606);
+  background-image: linear-gradient(to bottom, #f1b1b1, #c05151);
   text-decoration: none;
 }
 
