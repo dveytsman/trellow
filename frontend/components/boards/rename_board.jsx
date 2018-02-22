@@ -25,11 +25,8 @@ class RenameBoard extends React.Component{
 
 
   render(){
-    // debugger
-    console.log('title');
-    console.log(this.props.title);
     return(
-      <div className="create_board_form" onClick={(e)=> e.stopPropagation()}>
+      <div className="rename-board-form" onClick={(e)=> e.stopPropagation()}>
         <p className='p'>Current Board Name: {this.props.title}</p>
         <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
           <h3>New Title</h3>

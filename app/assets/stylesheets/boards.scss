@@ -63,12 +63,12 @@ li{
 
 }
 .dropdown-create{
-  position:absolute;
+  position: relative;
   top: 0;
-  left:0;
+  left: -112px;
   margin-top: -18px;
-    box-shadow: 0 1px 6px rgba(0,0,0,.15);
-    border: 1px solid #D6DADC;
+  box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  border: 1px solid #D6DADC;
 }
 .dropdown-create p{
   padding-left: 10px;
@@ -77,7 +77,6 @@ li{
 .board-items-cont{
   background-color: #e2e4e6 !important;
   color: #838c91;
-  position: relative;
 }
 .edity{
   background-color: #237abf;
