@@ -54,7 +54,7 @@ class ListIndex extends React.Component{
           <div  className='list-container'>
             {listsIndex}
             <div className="create-list board-items-cont" onClick={this.toggleDropDown('create-list-modal') }>
-              <p style="color:blue;">Create List</p>
+              <p>Create List</p>
               <DropdownContainer name="create-list-modal">
                 <CreateListContainer board={this.props.board}/>
               </DropdownContainer>
