@@ -26,7 +26,7 @@ class CreateList extends React.Component{
   render(){
     return(
       <div className="create-list-container" onClick={(e)=> e.stopPropagation()}>
-        <p>Create List</p>
+        <p id="create-list-text2">Create List</p>
         <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
           <h3>Title</h3>
           <input className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Create List Name"/>
