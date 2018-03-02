@@ -29,7 +29,7 @@ class CreateList extends React.Component{
         <p id="create-list-text2">Create List</p>
         <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
           <h3>Title</h3>
-          <input className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Create List Name"/>
+          <input autoFocus className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Create List Name"/>
           <input className='creation-submit' type="submit" value="Create"/>
         </form>
       </div>
