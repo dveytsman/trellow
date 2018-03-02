@@ -29,7 +29,7 @@ class CreateBoard extends React.Component{
         <p>Create Board</p>
         <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
           <h3>Title</h3>
-          <input className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Board Name"/>
+          <input autoFocus className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Board Name"/>
           <input className='creation-submit' type="submit" value="Create"/>
         </form>
       </div>
