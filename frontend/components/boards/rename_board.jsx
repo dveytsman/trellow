@@ -30,7 +30,7 @@ class RenameBoard extends React.Component{
         <p className='p'>Current Board Name: {this.props.title}</p>
         <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
           <h3>New Title</h3>
-          <input className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" />
+          <input autoFocus className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" />
           <input className='creation-submit' type="submit" value="Update"/>
         </form>
       </div>
