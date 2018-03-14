@@ -16,7 +16,10 @@ const BoardReducer = (oldState={}, action) => {
       return newState;
     case RECEIVE_LIST:
       let newState2 = merge({}, oldState);
-      newState2[action.payload.board_id].listIds.push(action.payload.id);
+      if (!newState2[action.payload.board_id].listIds.includes(action.payload.id)){
+        newState2[action.payload.board_id].listIds.push(action.payload.id);
+      }
+      // merge(newState2[action.payload.board_id].listIds, [action.payload.id]);
       return newState2;
     case  REMOVE_LIST:
 
