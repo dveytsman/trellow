@@ -17,7 +17,11 @@ class UpdateList extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     e.stopPropagation();
-    this.props.updateList({title: this.state.title, board_id: this.props.board.id});
+    this.props.updateList({
+      title: this.state.title,
+      board_id: this.props.board.id,
+      id: this.props.list.id
+    });
     this.setState({title: ''});
     this.props.showDropdown("");
   }
