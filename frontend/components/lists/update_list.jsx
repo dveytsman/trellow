@@ -30,11 +30,11 @@ class UpdateList extends React.Component{
   render(){
     return(
       <div className="create-list-container" onClick={(e)=> e.stopPropagation()}>
-        <p id="create-list-text2">Create List</p>
+        <p id="create-list-text3">Createy List</p>
         <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
           <h3>Title</h3>
-          <input autoFocus className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Create List Name"/>
-          <input className='creation-submit' type="submit" value="Create"/>
+          <input autoFocus className='creation-input' value={this.state.title} onChange={this.handleChange.bind(this)} type="text" placeholder="Rename List"/>
+          <input className='creation-submit' type="submit" value="Rename"/>
         </form>
       </div>
     );
