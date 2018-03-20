@@ -7,6 +7,7 @@ import { createBoard, fetchBoards, deleteBoard, updateBoard } from './actions/bo
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
+
   window.createBoard = createBoard;
   window.fetchBoards = fetchBoards;
   window.deleteBoard = deleteBoard;
@@ -21,5 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   const root = document.getElementById('root');
   window.store = store;
+  window.getState = store.getState;
   ReactDOM.render(<Root store={store}/>, root );
 });
