@@ -30,7 +30,7 @@ class UpdateList extends React.Component{
   render(){
     return(
       <div className="rename-list-form" onClick={(e)=> e.stopPropagation()}>
-        <p className="edit-list-text">{this.state.title}</p>
+        <p className="edit-list-text">{this.props.list.title}</p>
         <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
           <input autoFocus className='creation-input'  onChange={this.handleChange.bind(this)} type="text" placeholder="Rename List"/>
           <input  className='creation-submit' type="submit" value="Rename"/>
