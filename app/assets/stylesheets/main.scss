@@ -12,11 +12,33 @@ body{
 .main{
   height: 100vh;
 }
-
+.rename-list-button:focus{
+  outline:none;
+}
 .delete-list-button:focus{
   outline:none;
 }
-
+.rename-list-button{
+  background: #d7d9db;
+  background-image: -webkit-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: -moz-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: -ms-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: -o-linear-gradient(top, #d7d9db, #8e9294);
+  background-image: linear-gradient(to bottom, #d7d9db, #8e9294);
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  border-radius: 3px;
+  color: #333;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  height: max-content;
+  min-width: max-content;
+}
 .delete-list-button{
   // background-color: linear-gradient(top, #eee, hotpink) !important;
   background: #d7d9db;
@@ -44,14 +66,30 @@ body{
   text-decoration: none;
   cursor: pointer;
 }
+.rename-list-button:hover{
+  background-image: linear-gradient(to bottom, #f1b1b1, #c05151);
+  text-decoration: none;
+}
 
 .list-items{
-  justify-content: space-between;;
+  justify-content: space-between;
+  max-height: min-content;
 }
 .rename-board-form{
   position: absolute;
   top: 0;
   left: 0px;
+  font-size: 18px;
+  background-color: white;
+  border: 1px solid #d6dadc;
+  color: #838c91;
+  width: 320px;
+  height: 300px;
+}
+.rename-list-form{
+  position: relative;
+  top: -90px;
+  left: 10px;
   font-size: 18px;
   background-color: white;
   border: 1px solid #d6dadc;
@@ -74,4 +112,7 @@ body{
 }
 #create-list-text2{
     padding-left: 10px;
+}
+.edit-list-text{
+  padding-left:10px;
 }
