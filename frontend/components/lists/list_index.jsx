@@ -46,20 +46,15 @@ class ListIndex extends React.Component{
       }
       return(
         <div>
-        <li key={list.id}
-          className="list-items">{list.title}
-          <div className="buttons">
-          <button className='rename-list-button' onClick={this.toggleDropDown(`update-list-${list.id}`)}>
-            rename
-          </button>
+        <li key={list.id} className="list-items">
+          <UpdateListContainer board={this.props.board} list={list}/>
           <button className='delete-list-button' onClick={(e) => this.deleteList(e, list)}>
             delete
           </button>
-        </div>
         </li>
-        <DropdownContainer name={`update-list-${list.id}`}>
-          <UpdateListContainer board={this.props.board} list={list}/>
-          </DropdownContainer>
+
+
+
       </div>
       );
     });
