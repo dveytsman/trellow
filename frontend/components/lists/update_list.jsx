@@ -24,16 +24,17 @@ class UpdateList extends React.Component{
     });
     this.setState({title: ''});
     this.props.showDropdown("");
+    e.target.childNodes[0].blur()
   }
 
 
   render(){
     return(
-      <div className="rename-list-form" onClick={(e)=> e.stopPropagation()}>
-        <p className="edit-list-text">{this.props.list.title}</p>
-        <form className='creation-form' onSubmit={this.handleSubmit.bind(this)}>
-          <input autoFocus className='creation-input'  onChange={this.handleChange.bind(this)} type="text" placeholder="Rename List"/>
-          <input  className='creation-submit' type="submit" value="Rename"/>
+      <div className="" onClick={(e)=> e.stopPropagation()}>
+
+        <form className='' onSubmit={this.handleSubmit.bind(this)}>
+          <input className='text-list'  onChange={this.handleChange.bind(this)} type="text" placeholder={this.props.list.title}/>
+
         </form>
       </div>
     );
