@@ -116,3 +116,11 @@ body{
 .edit-list-text{
   padding-left:10px;
 }
+.text-list{
+  background-color: #e2e4e6;
+  border: none;
+}
+.text-list:focus{
+  background-color: white;
+  border: 3px solid lightblue;
+}
