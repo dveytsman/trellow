@@ -1,5 +1,5 @@
 class ListItem < ApplicationRecord
-  validates :title, :list_id, presence: true
+  validates :creator, :title, :list_id, presence: true
 
   belongs_to :list,
   primary_key: :id,
