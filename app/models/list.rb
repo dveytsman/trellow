@@ -9,4 +9,9 @@ class List < ApplicationRecord
   has_one :creator,
   through: :board,
   source: :creator
+
+  has_many :list_items, dependent: :destroy,
+  primary_key: :id,
+  foreign_key: :list_id,
+  class_name: :ListItem
 end
