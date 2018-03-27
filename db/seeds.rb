@@ -8,6 +8,7 @@
 User.destroy_all
 Board.destroy_all
 List.destroy_all
+ListItem.destroy_all
 
 u1 = User.create!(username: "guest", password: "newlife")
 
@@ -27,3 +28,14 @@ l7 = List.create!(creator_id: u1.id, title: "Trader joes list", board_id: b3.id)
 l8 = List.create!(creator_id: u1.id, title: "Whole foods list", board_id: b3.id)
 l9 = List.create!(creator_id: u1.id, title: "Update resume", board_id: b4.id)
 l10 = List.create!(creator_id: u1.id, title: "finish full stack list", board_id: b4.id)
+
+li1 = ListItem.create!(creator_id: u1.id, title: "Go over redux", list_id: l1.id)
+li2 = ListItem.create!(creator_id: u1.id, title: "go over react", list_id: l1.id)
+li3 = ListItem.create!(creator_id: u1.id, title: "build another project", list_id: l1.id)
+li4 = ListItem.create!(creator_id: u1.id, title: "Pray", list_id: l1.id)
+li5 = ListItem.create!(creator_id: u1.id, title: "Go over redux", list_id: l1.id)
+li6 = ListItem.create!(creator_id: u1.id, title: "Go over redux", list_id: l1.id)
+li7 = ListItem.create!(creator_id: u1.id, title: "Go over redux", list_id: l1.id)
+li8 = ListItem.create!(creator_id: u1.id, title: "Go over redux", list_id: l1.id)
+li9 = ListItem.create!(creator_id: u1.id, title: "Go over redux", list_id: l1.id)
+li10 = ListItem.create!(creator_id: u1.id, title: "Go over redux", list_id: l1.id)
