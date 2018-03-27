@@ -39,14 +39,13 @@ class ListIndex extends React.Component{
 
   render(){
     var content = (this.props.lists === null) ? [] : this.props.lists;
-
-    const listsIndex = content.map(list => {
+    const listsIndex = content.map((list, idx) => {
       if(list === undefined){
         return '';
       }
       return(
-        <div>
-        <li key={list.id} className="list-items">
+        <div key={idx}>
+        <li className="list-items">
           <UpdateListContainer board={this.props.board} list={list}/>
           <button className='delete-list-button' onClick={(e) => this.deleteList(e, list)}>
             delete
