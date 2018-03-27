@@ -24,7 +24,7 @@ class UpdateList extends React.Component{
     });
     this.setState({title: ''});
     this.props.showDropdown("");
-    e.target.childNodes[0].blur()
+    e.target.childNodes[0].blur();
   }
 
 
@@ -33,7 +33,7 @@ class UpdateList extends React.Component{
       <div className="" onClick={(e)=> e.stopPropagation()}>
 
         <form className='' onSubmit={this.handleSubmit.bind(this)}>
-          <input className='text-list'  onChange={this.handleChange.bind(this)} type="text" placeholder={this.props.list.title}/>
+          <input className='text-list'  onChange={this.handleChange.bind(this)} type="textarea" placeholder={this.props.list.title}/>
 
         </form>
       </div>
