@@ -10,5 +10,13 @@ export const deleteListItem = (list_item) => {
   return $.ajax({
     method: 'delete',
     url: '/api/list_items/' + list_item.id
-  })
-}
+  });
+};
+
+export const updateListItem = (list_item) => {
+  return $.ajax({
+    method: 'patch',
+    url: '/api/boards/' + list_item.list.board_id + '/lists/' + list_item.list.id + '/list_items/' + list_item.id,
+    data: {list_item}
+  });
+};

@@ -3,6 +3,9 @@ class Api::ListItemsController < ApplicationController
 
   def create
     @list_item = ListItem.new(list_item_params)
+    @list_item.creator_id = current_user.id
+    @list_item.list_id = params[:list_id]
+    debugger
     if @list_item.save
       render json: @list_item
     else
@@ -23,7 +26,7 @@ class Api::ListItemsController < ApplicationController
   def destroy
     @list_item = ListItem.find(params[:id])
     @list_item.destroy
-  end 
+  end
 
   def list_item_params
     params.require(:list_item).permit(:title, :body)
