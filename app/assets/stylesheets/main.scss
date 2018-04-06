@@ -125,3 +125,16 @@ body{
   background-color: white;
   border: 3px solid lightblue;
 }
+.cards{
+  position: relative;
+  left: -250px;
+}
+.card{
+  position: relative;
+  margin: 5px;
+  width: 200px;
+  top: 40px;
+  height: 30px;
+  background-color: white;
+  border-radius: 4px;
+}
