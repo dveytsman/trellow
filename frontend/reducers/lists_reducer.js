@@ -2,6 +2,7 @@ import { RECEIVE_BOARD } from '../actions/board_actions';
 import { RECEIVE_LIST } from '../actions/list_actions';
 import { REMOVE_LIST } from '../actions/list_actions';
 import merge from 'lodash/merge';
+import { RECEIVE_LIST_ITEM, REMOVE_LIST_ITEM } from '../actions/list_item_actions';
 
 const ListReducer = (oldState={}, action) => {
   Object.freeze(oldState);
