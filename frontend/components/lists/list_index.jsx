@@ -5,6 +5,7 @@ import { createList } from '../../actions/list_actions';
 import CreateListContainer from '../lists/create_list_container';
 import UpdateListContainer from '../lists/update_list_container';
 import DropdownContainer from '../navbar/dropdown_container';
+import ListItemIndexContainer from '../list_items/list_item_index_container';
 
 
 class ListIndex extends React.Component{
@@ -50,6 +51,7 @@ class ListIndex extends React.Component{
           <button className='delete-list-button' onClick={(e) => this.deleteList(e, list)}>
             delete
           </button>
+          <ListItemIndexContainer list={list}/>
         </li>
 
 
