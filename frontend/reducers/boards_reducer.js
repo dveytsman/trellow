@@ -19,8 +19,10 @@ const BoardReducer = (oldState={}, action) => {
       if (!newState2[action.payload.board_id].listIds.includes(action.payload.id)){
         newState2[action.payload.board_id].listIds.push(action.payload.id);
       }
-      newState2[action.payload.board_id].listIds = newState2[action.payload.board_id].listIds.sort();
-      console.log(newState2[action.payload.board_id].listIds)
+      newState2[action.payload.board_id].listIds =
+       newState2[action.payload.board_id].listIds.sort((a, b) =>(
+        a - b
+      ));
       // merge(newState2[action.payload.board_id].listIds, [action.payload.id]);
       return newState2;
     case  REMOVE_LIST:
