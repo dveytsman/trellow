@@ -7,7 +7,6 @@ class UpdateList extends React.Component{
     this.state = {
       title: props.list ? props.list.title : '',
     };
-
   }
   handleChange(e){
     e.stopPropagation();
@@ -22,9 +21,11 @@ class UpdateList extends React.Component{
       board_id: this.props.board.id,
       id: this.props.list.id
     });
-    this.setState({title: ''});
-    this.props.showDropdown("");
     e.target.childNodes[0].blur();
+    var form = document.getElementById('testing');
+    form.reset();
+    var inp = document.getElementById('list');
+    inp.value = '';
   }
 
 
@@ -32,8 +33,8 @@ class UpdateList extends React.Component{
     return(
       <div className="" onClick={(e)=> e.stopPropagation()}>
 
-        <form className='' onSubmit={this.handleSubmit.bind(this)}>
-          <input className='text-list'  onChange={this.handleChange.bind(this)} type="textarea" placeholder={this.props.list.title}/>
+        <form id="testing" className='' onSubmit={this.handleSubmit.bind(this)}>
+          <input id="list" className='text-list'  onChange={this.handleChange.bind(this)} type="textarea" placeholder={this.props.list.title}/>
 
         </form>
       </div>
