@@ -44,6 +44,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'annotate'
   gem 'font-awesome-rails'
+  gem 'font-awesome-sass'
 end
 
 group :development do
