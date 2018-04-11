@@ -118,7 +118,7 @@ body{
 }
 .text-list{
   background-color: #e2e4e6;
-  border: none;
+  border: 3px solid #e2e4e6;
   color: #757575;
 }
 .text-list:focus{
@@ -130,11 +130,22 @@ body{
   left: -250px;
 }
 .card{
+  padding: 5px;
+  padding-left: 20px;
   position: relative;
   margin: 5px;
-  width: 200px;
-  top: 40px;
-  height: 30px;
+  width: 243px;
+  height: 18px;
   background-color: white;
   border-radius: 4px;
+}
+ul.cards{
+  padding-left: 0px;
+  margin-top: 50px;
+  max-height: min-content;
+}
+.x{
+  position: relative;
+top: -18px;
+left: 230px;
 }
