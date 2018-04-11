@@ -4,8 +4,7 @@ class Api::ListItemsController < ApplicationController
   def create
     @list_item = ListItem.new(list_item_params)
     @list_item.creator_id = current_user.id
-    @list_item.list_id = params[:list_id]
-    debugger
+    # @list_item.list_id = params[:list_id]
     if @list_item.save
       render json: @list_item
     else
@@ -29,7 +28,7 @@ class Api::ListItemsController < ApplicationController
   end
 
   def list_item_params
-    params.require(:list_item).permit(:title, :body)
+    params.require(:list_item).permit(:title, :body, :list_id)
   end
 
 end
