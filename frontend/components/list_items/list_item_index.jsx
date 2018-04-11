@@ -29,14 +29,14 @@ class ListItemIndex extends React.Component{
   render(){
         var cards = (this.props.list.cards === undefined) ? [] : Object.values(this.props.list.cards);
     var cardsIndex = cards.map(card => (
-      <li onClick={this.handleDelete} key={card.id} className="card">{card.title}<div id={card.id} className="x" >x</div></li>
+      <li onClick={this.handleDelete} key={card.id} className="card">{card.title}<div id={card.id} className="x" ><i id={card.id} className="fa fa-trash"></i></div></li>
     ));
     return(
       <ul className="cards">
           {cardsIndex}
           <li>
             <form onSubmit={this.handleSubmit}>
-              <input onChange={this.handleChange} type="text" value={this.state.title}/>
+              <input className="new-card" onChange={this.handleChange} type="text" placeholder="Create New To Do" value={this.state.title}/>
             </form>
             </li>
       </ul>

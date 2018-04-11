@@ -149,3 +149,26 @@ ul.cards{
 top: -18px;
 left: 230px;
 }
+i{
+  width: 15px;
+  height: 15px;
+}
+.fa-trash:hover{
+  color: red;
+  cursor: pointer;
+}
+.new-card{
+  margin: 5px;
+  width: 240px;
+  line-height: 30px;
+  font-size: 20px;
+  padding-left: 20px;
+  border-radius: 4px;
+  background-color: #e2e4e6;
+  border: 3px solid #e2e4e6;
+}
+
+.new-card:focus{
+  background-color: white;
+  border: 3px solid lightblue;
+}
