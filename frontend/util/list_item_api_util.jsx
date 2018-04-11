@@ -1,15 +1,15 @@
-export const createListItem = (list_item) => {
+export const createListItem = (list_item, boardId) => {
   return $.ajax({
     method: 'post',
-    url: '/api/boards/' + list_item.list.board_id + '/lists/' + list_item.list.id + '/list_items',
+    url: '/api/boards/' + boardId + '/lists/' + list_item.list_id + '/list_items',
     data: {list_item}
   });
 };
 
-export const deleteListItem = (list_item) => {
+export const deleteListItem = (listItemId, listId) => {
   return $.ajax({
     method: 'delete',
-    url: '/api/list_items/' + list_item.id
+    url: '/api/list_items/' + listItemId
   });
 };
 
