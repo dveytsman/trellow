@@ -6,7 +6,6 @@ import RootReducer from '../reducers/root_reducer';
 const configureStore = (preloadedState = {}) => {
   const hostname = window && window.location && window.location.hostname;
   let middleware = [];
-  debugger
   switch(hostname) {
     case "localhost":
         middleware = [thunk, logger];
