@@ -8,7 +8,7 @@ else
     @board.lists.each do |list|
       json.set! list.id do
         json.partial! 'api/lists/list', list: list
-          json.card do
+          json.cards do
           list.list_items.each do |list_item|
             json.set! list_item.id do
               json.partial! 'api/list_items/list_item', list_item: list_item
