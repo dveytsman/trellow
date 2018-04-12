@@ -29,15 +29,17 @@ class BoardIndex extends React.Component{
 
     if(Object.keys(this.props.boards).length === 0){
       return(
-        <div className="board-index-div">
-          <ul>
-            <div className="board-items board-items-cont" onClick={this.toggleDropDown('dropdown-create') }>
-              <p>Create Board</p>
-              <DropdownContainer name="dropdown-create">
-                <CreateBoardContainer />
-              </DropdownContainer>
-            </div>
-          </ul>
+        <div className="other-board-index">
+          <div className="board-index-div">
+            <ul>
+              <div className="board-items board-items-cont" onClick={this.toggleDropDown('dropdown-create') }>
+                <p>Create Board</p>
+                <DropdownContainer name="dropdown-create">
+                  <CreateBoardContainer />
+                </DropdownContainer>
+              </div>
+            </ul>
+          </div>
         </div>
       );
     }else {
