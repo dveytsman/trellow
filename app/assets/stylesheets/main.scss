@@ -132,11 +132,12 @@ body{
 }
 .card{
   padding: 5px;
+  padding-right: 20px;
   padding-left: 20px;
   position: relative;
   margin: 5px;
-  width: 243px;
-  height: 18px;
+  width: 226px;
+  height: max-content;
   background-color: white;
   border-radius: 4px;
 }
@@ -146,9 +147,9 @@ ul.cards{
   max-height: min-content;
 }
 .x{
+  float: right;
   position: relative;
-top: -18px;
-left: 230px;
+  left: 18px;
 }
 i{
   width: 15px;
